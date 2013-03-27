@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/8/trunk/RUN/plot-sinr
+END
+clear.sh
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/8/trunk/RUN/plot-sinr/clear.sh
+END
+plotSINR_mob.m
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/RUN/plot-sinr/plotSINR_mob.m
+END
+postSim_mob.sh
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/RUN/plot-sinr/postSim_mob.sh
+END
+run_mob.sh
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/RUN/plot-sinr/run_mob.sh
+END

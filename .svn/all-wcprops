@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 21
+/svn/!svn/ver/9/trunk
+END
+bugs
+K 25
+svn:wc:ra_dav:version-url
+V 26
+/svn/!svn/ver/8/trunk/bugs
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/8/trunk/LICENSE
+END
+AUTHORS
+K 25
+svn:wc:ra_dav:version-url
+V 29
+/svn/!svn/ver/8/trunk/AUTHORS
+END
+RELEASE_NOTES
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/9/trunk/RELEASE_NOTES
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 28
+/svn/!svn/ver/8/trunk/README
+END
+CONTRIBUTORS
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/8/trunk/CONTRIBUTORS
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 30
+/svn/!svn/ver/8/trunk/Makefile
+END

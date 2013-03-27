@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/8/trunk/src/device/CqiManager
+END
+fullband-cqi-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/8/trunk/src/device/CqiManager/fullband-cqi-manager.h
+END
+wideband-cqi-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/src/device/CqiManager/wideband-cqi-manager.cpp
+END
+cqi-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/src/device/CqiManager/cqi-manager.cpp
+END
+wideband-cqi-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/8/trunk/src/device/CqiManager/wideband-cqi-manager.h
+END
+fullband-cqi-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/!svn/ver/8/trunk/src/device/CqiManager/fullband-cqi-manager.cpp
+END
+cqi-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/8/trunk/src/device/CqiManager/cqi-manager.h
+END

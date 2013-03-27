@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc
+END
+um-rlc-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/um-rlc-entity.h
+END
+rlc-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/rlc-entity.h
+END
+am-state-variables.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/am-state-variables.cpp
+END
+amd-record.h
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/amd-record.h
+END
+am-rlc-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/am-rlc-entity.cpp
+END
+am-state-variables.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/am-state-variables.h
+END
+tm-rlc-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/tm-rlc-entity.cpp
+END
+um-rlc-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/um-rlc-entity.cpp
+END
+am-rlc-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/am-rlc-entity.h
+END
+tm-rlc-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/tm-rlc-entity.h
+END
+rlc-entity.cc
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/rlc-entity.cc
+END
+amd-record.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/8/trunk/src/protocolStack/rlc/amd-record.cpp
+END

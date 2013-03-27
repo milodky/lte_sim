@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/!svn/ver/8/trunk/src/channel/propagation-model
+END
+propagation-loss-model.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/propagation-loss-model.cpp
+END
+macrocell-urban-area-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-urban-area-channel-realization.cpp
+END
+propagation-loss-model.h
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/propagation-loss-model.h
+END
+microcell-area-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/microcell-area-channel-realization.cpp
+END
+3gpp-downlin-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/3gpp-downlin-channel-realization.cpp
+END
+macrocell-urban-area-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-urban-area-channel-realization.h
+END
+channel-realization-helper.h
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/channel-realization-helper.h
+END
+microcell-area-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/microcell-area-channel-realization.h
+END
+femtocell-urban-area-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/femtocell-urban-area-channel-realization.cpp
+END
+winner-downlink-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/winner-downlink-channel-realization.cpp
+END
+3gpp-downlin-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/3gpp-downlin-channel-realization.h
+END
+femtocell-urban-area-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/femtocell-urban-area-channel-realization.h
+END
+macrocell-rural-area-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-rural-area-channel-realization.cpp
+END
+winner-downlink-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/winner-downlink-channel-realization.h
+END
+shadowing-trace.h
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/shadowing-trace.h
+END
+fast-fading-trace.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/fast-fading-trace.h
+END
+macrocell-rural-area-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-rural-area-channel-realization.h
+END
+channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/channel-realization.cpp
+END
+macrocell-sub-urban-area-channel-realization.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-sub-urban-area-channel-realization.cpp
+END
+channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/channel-realization.h
+END
+macrocell-sub-urban-area-channel-realization.h
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/!svn/ver/8/trunk/src/channel/propagation-model/macrocell-sub-urban-area-channel-realization.h
+END

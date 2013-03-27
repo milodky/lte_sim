@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/!svn/ver/8/trunk/RUN/test-femto/sinr-urban/OUTPUT
+END
+only_macro
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/!svn/ver/8/trunk/RUN/test-femto/sinr-urban/OUTPUT/only_macro
+END
+macro_with_streets
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/RUN/test-femto/sinr-urban/OUTPUT/macro_with_streets
+END
+macro_with_femto
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/RUN/test-femto/sinr-urban/OUTPUT/macro_with_femto
+END
+macro_with_femto_reuse
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/!svn/ver/8/trunk/RUN/test-femto/sinr-urban/OUTPUT/macro_with_femto_reuse
+END

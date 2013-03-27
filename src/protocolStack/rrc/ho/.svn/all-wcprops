@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho
+END
+ho-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/ho-manager.cpp
+END
+handover-entity.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/handover-entity.cpp
+END
+position-based-ho-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/position-based-ho-manager.h
+END
+ho-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/ho-manager.h
+END
+power-based-ho-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/power-based-ho-manager.cpp
+END
+handover-entity.h
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/handover-entity.h
+END
+power-based-ho-manager.h
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/power-based-ho-manager.h
+END
+position-based-ho-manager.cpp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/!svn/ver/8/trunk/src/protocolStack/rrc/ho/position-based-ho-manager.cpp
+END

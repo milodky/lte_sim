@@ -1,0 +1,571 @@
+CELL 0 position 0 0
+eNB 0 cell 0 position 0 0 channels 0 0
+BandwidthManager: 0x7fd1b1405360
+	 operative sub band: 1
+	 m_dlBandwidth 20
+	 m_ulBandwidth 20
+	 m_dlOffsetBw 0
+	 m_ulOffsetBw 0
+	 DL channels: 2110 2110.02 2110.04 2110.05 2110.07 2110.09 2110.11 2110.13 2110.14 2110.16 2110.18 2110.2 2110.22 2110.23 2110.25 2110.27 2110.29 2110.31 2110.32 2110.34 2110.36 2110.38 2110.4 2110.41 2110.43 2110.45 2110.47 2110.49 2110.5 2110.52 2110.54 2110.56 2110.58 2110.59 2110.61 2110.63 2110.65 2110.67 2110.68 2110.7 2110.72 2110.74 2110.76 2110.77 2110.79 2110.81 2110.83 2110.85 2110.86 2110.88 2110.9 2110.92 2110.94 2110.95 2110.97 2110.99 2111.01 2111.03 2111.04 2111.06 2111.08 2111.1 2111.12 2111.13 2111.15 2111.17 2111.19 2111.21 2111.22 2111.24 2111.26 2111.28 2111.3 2111.31 2111.33 2111.35 2111.37 2111.39 2111.4 2111.42 2111.44 2111.46 2111.48 2111.49 2111.51 2111.53 2111.55 2111.57 2111.58 2111.6 2111.62 2111.64 2111.66 2111.67 2111.69 2111.71 2111.73 2111.75 2111.76 2111.78 
+	 UL channels: 1920 1920.02 1920.04 1920.05 1920.07 1920.09 1920.11 1920.13 1920.14 1920.16 1920.18 1920.2 1920.22 1920.23 1920.25 1920.27 1920.29 1920.31 1920.32 1920.34 1920.36 1920.38 1920.4 1920.41 1920.43 1920.45 1920.47 1920.49 1920.5 1920.52 1920.54 1920.56 1920.58 1920.59 1920.61 1920.63 1920.65 1920.67 1920.68 1920.7 1920.72 1920.74 1920.76 1920.77 1920.79 1920.81 1920.83 1920.85 1920.86 1920.88 1920.9 1920.92 1920.94 1920.95 1920.97 1920.99 1921.01 1921.03 1921.04 1921.06 1921.08 1921.1 1921.12 1921.13 1921.15 1921.17 1921.19 1921.21 1921.22 1921.24 1921.26 1921.28 1921.3 1921.31 1921.33 1921.35 1921.37 1921.39 1921.4 1921.42 1921.44 1921.46 1921.48 1921.49 1921.51 1921.53 1921.55 1921.57 1921.58 1921.6 1921.62 1921.64 1921.66 1921.67 1921.69 1921.71 1921.73 1921.75 1921.76 1921.78 
+Created Building, id 0, position: 267.5 429.5 and 25 femtocells
+Created Building, id 1, position: 332.5 429.5 and 25 femtocells
+Created Building, id 2, position: 267.5 482.5 and 25 femtocells
+Created Building, id 3, position: 332.5 482.5 and 25 femtocells
+Created Building, id 4, position: 267.5 535.5 and 25 femtocells
+Created Building, id 5, position: 332.5 535.5 and 25 femtocells
+Created Building, id 6, position: 267.5 588.5 and 25 femtocells
+Created Building, id 7, position: 332.5 588.5 and 25 femtocells
+Created Building, id 8, position: 267.5 641.5 and 25 femtocells
+Created Building, id 9, position: 332.5 641.5 and 25 femtocells
+Created Building, id 10, position: 267.5 694.5 and 25 femtocells
+Created Building, id 11, position: 332.5 694.5 and 25 femtocells
+Created Building, id 12, position: 267.5 747.5 and 25 femtocells
+Created Building, id 13, position: 332.5 747.5 and 25 femtocells
+Created Building, id 14, position: 267.5 800.5 and 25 femtocells
+Created Building, id 15, position: 332.5 800.5 and 25 femtocells
+Created Building, id 0, position: 429.5 332.5 and 25 femtocells
+Created Building, id 1, position: 429.5 267.5 and 25 femtocells
+Created Building, id 2, position: 482.5 332.5 and 25 femtocells
+Created Building, id 3, position: 482.5 267.5 and 25 femtocells
+Created Building, id 4, position: 535.5 332.5 and 25 femtocells
+Created Building, id 5, position: 535.5 267.5 and 25 femtocells
+Created Building, id 6, position: 588.5 332.5 and 25 femtocells
+Created Building, id 7, position: 588.5 267.5 and 25 femtocells
+Created Building, id 8, position: 641.5 332.5 and 25 femtocells
+Created Building, id 9, position: 641.5 267.5 and 25 femtocells
+Created Building, id 10, position: 694.5 332.5 and 25 femtocells
+Created Building, id 11, position: 694.5 267.5 and 25 femtocells
+Created Building, id 0, position: 267.5 -200.5 and 25 femtocells
+Created Building, id 1, position: 332.5 -200.5 and 25 femtocells
+Created Building, id 2, position: 267.5 -147.5 and 25 femtocells
+Created Building, id 3, position: 332.5 -147.5 and 25 femtocells
+Created Building, id 4, position: 267.5 -94.5 and 25 femtocells
+Created Building, id 5, position: 332.5 -94.5 and 25 femtocells
+Created Building, id 6, position: 267.5 -41.5 and 25 femtocells
+Created Building, id 7, position: 332.5 -41.5 and 25 femtocells
+Created Building, id 8, position: 267.5 11.5 and 25 femtocells
+Created Building, id 9, position: 332.5 11.5 and 25 femtocells
+Created Building, id 10, position: 267.5 64.5 and 25 femtocells
+Created Building, id 11, position: 332.5 64.5 and 25 femtocells
+Created Building, id 12, position: 267.5 117.5 and 25 femtocells
+Created Building, id 13, position: 332.5 117.5 and 25 femtocells
+Created Building, id 14, position: 267.5 170.5 and 25 femtocells
+Created Building, id 15, position: 332.5 170.5 and 25 femtocells
+Created Building, id 0, position: -200.5 332.5 and 25 femtocells
+Created Building, id 1, position: -200.5 267.5 and 25 femtocells
+Created Building, id 2, position: -147.5 332.5 and 25 femtocells
+Created Building, id 3, position: -147.5 267.5 and 25 femtocells
+Created Building, id 4, position: -94.5 332.5 and 25 femtocells
+Created Building, id 5, position: -94.5 267.5 and 25 femtocells
+Created Building, id 6, position: -41.5 332.5 and 25 femtocells
+Created Building, id 7, position: -41.5 267.5 and 25 femtocells
+Created Building, id 8, position: 11.5 332.5 and 25 femtocells
+Created Building, id 9, position: 11.5 267.5 and 25 femtocells
+Created Building, id 10, position: 64.5 332.5 and 25 femtocells
+Created Building, id 11, position: 64.5 267.5 and 25 femtocells
+Created Building, id 12, position: 117.5 332.5 and 25 femtocells
+Created Building, id 13, position: 117.5 267.5 and 25 femtocells
+Created Building, id 14, position: 170.5 332.5 and 25 femtocells
+Created Building, id 15, position: 170.5 267.5 and 25 femtocells
+UE 5001 position 709.642 147.586 cell 0 target 0
+UE 5002 position 359.629 -122.027 cell 0 target 0
+UE 5003 position -459.743 505.415 cell 0 target 0
+UE 5004 position -743.677 214.654 cell 0 target 0
+UE 5005 position 690.975 -375.659 cell 0 target 0
+UE 5006 position 253.782 -678.923 cell 0 target 0
+UE 5007 position -431.072 -30.5744 cell 0 target 0
+UE 5008 position 238.102 383.79 cell 0 target 0
+UE 5009 position -502.074 39.988 cell 0 target 0
+UE 5010 position -171.483 -317.536 cell 0 target 0
+UE 5011 position -442.565 -591.579 cell 0 target 0
+UE 5012 position 240.814 -832.062 cell 0 target 0
+UE 5013 position 445.972 256.968 cell 0 target 0
+UE 5014 position -732.475 -501.549 cell 0 target 0
+UE 5015 position -443.006 -800.205 cell 0 target 0
+UE 5016 position -249.184 572.305 cell 0 target 0
+UE 5017 position 416.01 687.907 cell 0 target 0
+UE 5018 position 716.501 237.693 cell 0 target 0
+UE 5019 position 789.099 -11.957 cell 0 target 0
+UE 5020 position 852.269 -310.788 cell 0 target 0
+UE 5021 position 648.193 577.435 cell 0 target 0
+UE 5022 position -48.9445 -10.7824 cell 0 target 0
+UE 5023 position 112.485 532.271 cell 0 target 0
+UE 5024 position 288.397 -315.741 cell 0 target 0
+UE 5025 position 740.946 676.13 cell 0 target 0
+UE 5026 position -17.1884 -885.179 cell 0 target 0
+UE 5027 position -482.245 305.322 cell 0 target 0
+UE 5028 position 611.355 645.394 cell 0 target 0
+UE 5029 position -715.337 -460.681 cell 0 target 0
+UE 5030 position 389.036 -871.641 cell 0 target 0
+UE 5031 position -363.167 46.9633 cell 0 target 0
+UE 5032 position 272.386 584.973 cell 0 target 0
+UE 5033 position 861.159 -298.124 cell 0 target 0
+UE 5034 position 841.303 772.642 cell 0 target 0
+UE 5035 position -714.928 -790.689 cell 0 target 0
+UE 5036 position 27.2379 586.963 cell 0 target 0
+UE 5037 position 54.9296 -197.902 cell 0 target 0
+UE 5038 position -279.504 372.528 cell 0 target 0
+UE 5039 position -156.477 -104.05 cell 0 target 0
+UE 5040 position -545.854 439.861 cell 0 target 0
+UE 5041 position 827.288 -771.852 cell 0 target 0
+UE 5042 position -596.451 -348.436 cell 0 target 0
+UE 5043 position 158.933 -11.2405 cell 0 target 0
+UE 5044 position -641.896 852.854 cell 0 target 0
+UE 5045 position -619.338 183.987 cell 0 target 0
+UE 5046 position 666.67 -269.999 cell 0 target 0
+UE 5047 position 148.65 -38.4265 cell 0 target 0
+UE 5048 position -206.832 -420.154 cell 0 target 0
+UE 5049 position 535.247 -497.342 cell 0 target 0
+UE 5050 position 506.852 -736.523 cell 0 target 0
+UE 5051 position 688.461 560.059 cell 0 target 0
+UE 5052 position -176.531 -557.757 cell 0 target 0
+UE 5053 position -348.608 -57.8608 cell 0 target 0
+UE 5054 position 764.82 521.821 cell 0 target 0
+UE 5055 position -389.96 -265.184 cell 0 target 0
+UE 5056 position 878.176 -493.19 cell 0 target 0
+UE 5057 position -676.67 -401.09 cell 0 target 0
+UE 5058 position -830.693 -664.869 cell 0 target 0
+UE 5059 position 478.602 -343.771 cell 0 target 0
+UE 5060 position -312.255 724.174 cell 0 target 0
+UE 5061 position 753.133 300.372 cell 0 target 0
+UE 5062 position 646.217 -225.423 cell 0 target 0
+UE 5063 position -101.442 -334.996 cell 0 target 0
+UE 5064 position -884.449 -530.253 cell 0 target 0
+UE 5065 position -715.309 -0.429538 cell 0 target 0
+UE 5066 position 814.547 -700.681 cell 0 target 0
+UE 5067 position -747.971 54.9971 cell 0 target 0
+UE 5068 position 10.8896 -579.089 cell 0 target 0
+UE 5069 position 662.929 -148.073 cell 0 target 0
+UE 5070 position -352.546 365.696 cell 0 target 0
+UE 5071 position -53.0828 636.939 cell 0 target 0
+UE 5072 position 230.403 581.172 cell 0 target 0
+UE 5073 position 356.705 -665.852 cell 0 target 0
+UE 5074 position 597.367 -448.09 cell 0 target 0
+UE 5075 position 636.337 -691.922 cell 0 target 0
+UE 5076 position 176.436 753.166 cell 0 target 0
+UE 5077 position 588.386 -189.357 cell 0 target 0
+UE 5078 position 457.013 414.714 cell 0 target 0
+UE 5079 position 441.539 -454.155 cell 0 target 0
+UE 5080 position -633.734 -561.048 cell 0 target 0
+UE 5081 position -337.327 551.116 cell 0 target 0
+UE 5082 position 647.183 -190.409 cell 0 target 0
+UE 5083 position 26.4488 -75.0887 cell 0 target 0
+UE 5084 position 248.787 -36.2397 cell 0 target 0
+UE 5085 position -186.839 798.04 cell 0 target 0
+UE 5086 position 308.225 -61.8458 cell 0 target 0
+UE 5087 position 822.321 341.352 cell 0 target 0
+UE 5088 position -316.648 692.307 cell 0 target 0
+UE 5089 position -845.58 -665.792 cell 0 target 0
+UE 5090 position 71.1562 722.285 cell 0 target 0
+UE 5091 position 569.215 -197.187 cell 0 target 0
+UE 5092 position -77.3544 -495.508 cell 0 target 0
+UE 5093 position -301.115 755.637 cell 0 target 0
+UE 5094 position 153.971 -609.384 cell 0 target 0
+UE 5095 position -325.751 700.835 cell 0 target 0
+UE 5096 position -517.016 -881.622 cell 0 target 0
+UE 5097 position 394.286 -831.172 cell 0 target 0
+UE 5098 position -747.087 506.96 cell 0 target 0
+UE 5099 position -418.467 -567.193 cell 0 target 0
+UE 5100 position 307.287 372.816 cell 0 target 0
+UE 5101 position 288.019 534.63 cell 0 target 0
+UE 5102 position 80.4043 -444.618 cell 0 target 0
+UE 5103 position 406.364 562.066 cell 0 target 0
+UE 5104 position -755.63 -869.62 cell 0 target 0
+UE 5105 position -523.389 -4.0272 cell 0 target 0
+UE 5106 position 655.011 -36.0006 cell 0 target 0
+UE 5107 position -661.581 -587.704 cell 0 target 0
+UE 5108 position -806.599 -710.469 cell 0 target 0
+UE 5109 position 669.125 -419.451 cell 0 target 0
+UE 5110 position 297.54 346.971 cell 0 target 0
+UE 5111 position 883.483 501.31 cell 0 target 0
+UE 5112 position -77.6915 -761.064 cell 0 target 0
+UE 5113 position 580.176 414.206 cell 0 target 0
+UE 5114 position 528.714 -511.975 cell 0 target 0
+UE 5115 position 122.14 814.328 cell 0 target 0
+UE 5116 position 885.81 10.3945 cell 0 target 0
+UE 5117 position -220.028 -812.113 cell 0 target 0
+UE 5118 position -346.468 -87.5624 cell 0 target 0
+UE 5119 position 231.612 -689.616 cell 0 target 0
+UE 5120 position -539.735 680.748 cell 0 target 0
+UE 5121 position -479.255 158.323 cell 0 target 0
+UE 5122 position -57.4152 -176.911 cell 0 target 0
+UE 5123 position -407.52 -192.906 cell 0 target 0
+UE 5124 position 170.581 -453.409 cell 0 target 0
+UE 5125 position -803.989 -39.7798 cell 0 target 0
+UE 5126 position -350.083 358.33 cell 0 target 0
+UE 5127 position -847.345 280.813 cell 0 target 0
+UE 5128 position 472.91 -602.643 cell 0 target 0
+UE 5129 position -370.57 -163.241 cell 0 target 0
+UE 5130 position 584.316 -196.409 cell 0 target 0
+UE 5131 position -346.28 -523.236 cell 0 target 0
+UE 5132 position -542.353 -123.139 cell 0 target 0
+UE 5133 position -108.739 -583.041 cell 0 target 0
+UE 5134 position -619.846 648.716 cell 0 target 0
+UE 5135 position 854.078 -507.997 cell 0 target 0
+UE 5136 position 65.9643 -137.937 cell 0 target 0
+UE 5137 position 404.782 -823.91 cell 0 target 0
+UE 5138 position 759.144 539.007 cell 0 target 0
+UE 5139 position 262.414 398.493 cell 0 target 0
+UE 5140 position -818.981 -6.8909 cell 0 target 0
+UE 5141 position -176.972 -766.932 cell 0 target 0
+UE 5142 position -765.893 -566.807 cell 0 target 0
+UE 5143 position 268.059 -139.337 cell 0 target 0
+UE 5144 position 3.65752 271.927 cell 0 target 0
+UE 5145 position -253.156 399.723 cell 0 target 0
+UE 5146 position -843.065 205.843 cell 0 target 0
+UE 5147 position -333.304 -236.069 cell 0 target 0
+UE 5148 position 503.908 185.864 cell 0 target 0
+UE 5149 position 367.643 -420.409 cell 0 target 0
+UE 5150 position -71.8337 490.663 cell 0 target 0
+UE 5151 position -818.347 -161.783 cell 0 target 0
+UE 5152 position 789.426 77.0264 cell 0 target 0
+UE 5153 position -198.657 167.254 cell 0 target 0
+UE 5154 position 482.178 358.27 cell 0 target 0
+UE 5155 position -718.819 406.439 cell 0 target 0
+UE 5156 position -570.509 47.5786 cell 0 target 0
+UE 5157 position -871.606 -678.442 cell 0 target 0
+UE 5158 position 143.107 399.437 cell 0 target 0
+UE 5159 position 637.668 79.0001 cell 0 target 0
+UE 5160 position 450.209 -545.155 cell 0 target 0
+UE 5161 position -286.771 631.532 cell 0 target 0
+UE 5162 position -675.4 -640.591 cell 0 target 0
+UE 5163 position -307.256 149.237 cell 0 target 0
+UE 5164 position -426.398 -678.885 cell 0 target 0
+UE 5165 position -848.604 714.989 cell 0 target 0
+UE 5166 position -615.152 334.024 cell 0 target 0
+UE 5167 position 336.904 -461.623 cell 0 target 0
+UE 5168 position 669.187 634.305 cell 0 target 0
+UE 5169 position 266.72 756.403 cell 0 target 0
+UE 5170 position 207.529 -453.159 cell 0 target 0
+UE 5171 position -651.159 -34.0292 cell 0 target 0
+UE 5172 position 38.9987 251.815 cell 0 target 0
+UE 5173 position 473.526 746.826 cell 0 target 0
+UE 5174 position -154.066 814.091 cell 0 target 0
+UE 5175 position 27.3101 0.330654 cell 0 target 0
+UE 5176 position 84.6785 -607.888 cell 0 target 0
+UE 5177 position 347.966 70.9623 cell 0 target 0
+UE 5178 position -273.373 821.374 cell 0 target 0
+UE 5179 position -601.191 -821.699 cell 0 target 0
+UE 5180 position -825.075 168.859 cell 0 target 0
+UE 5181 position -11.0887 832.344 cell 0 target 0
+UE 5182 position -115.628 635.51 cell 0 target 0
+UE 5183 position 147.672 -275.469 cell 0 target 0
+UE 5184 position -735.324 206.354 cell 0 target 0
+UE 5185 position -417.618 -713.623 cell 0 target 0
+UE 5186 position -541.856 -769.652 cell 0 target 0
+UE 5187 position -191.326 -821.921 cell 0 target 0
+UE 5188 position -464.732 -549.839 cell 0 target 0
+UE 5189 position 669.649 -614.25 cell 0 target 0
+UE 5190 position -583.535 733.717 cell 0 target 0
+UE 5191 position 323.531 -212.569 cell 0 target 0
+UE 5192 position -306.872 -602.944 cell 0 target 0
+UE 5193 position -22.5061 -260.816 cell 0 target 0
+UE 5194 position 322.448 -416.391 cell 0 target 0
+UE 5195 position 515.805 340.985 cell 0 target 0
+UE 5196 position 768.056 -887.154 cell 0 target 0
+UE 5197 position -406.394 730.447 cell 0 target 0
+UE 5198 position 350.799 879.676 cell 0 target 0
+UE 5199 position -39.9433 72.8525 cell 0 target 0
+UE 5200 position 395.834 -24.12 cell 0 target 0
+UE 5201 position 418.626 -348.356 cell 0 target 0
+UE 5202 position -848.068 729.22 cell 0 target 0
+UE 5203 position 885.443 -752.392 cell 0 target 0
+UE 5204 position 699.124 -228.302 cell 0 target 0
+UE 5205 position -821.475 -535.511 cell 0 target 0
+UE 5206 position -169.635 136.857 cell 0 target 0
+UE 5207 position -862.362 -117.064 cell 0 target 0
+UE 5208 position -81.7527 -617.704 cell 0 target 0
+UE 5209 position -52.7643 590.331 cell 0 target 0
+UE 5210 position -321.492 278.623 cell 0 target 0
+UE 5211 position 463.994 744.798 cell 0 target 0
+UE 5212 position 55.1624 115.159 cell 0 target 0
+UE 5213 position 99.838 377.533 cell 0 target 0
+UE 5214 position 748.985 783.017 cell 0 target 0
+UE 5215 position -234.571 -438.275 cell 0 target 0
+UE 5216 position 388.62 -664.518 cell 0 target 0
+UE 5217 position 62.0958 -356.108 cell 0 target 0
+UE 5218 position -153.105 764.059 cell 0 target 0
+UE 5219 position -635.36 -895.505 cell 0 target 0
+UE 5220 position -563.266 -611.102 cell 0 target 0
+UE 5221 position 897.044 -188.545 cell 0 target 0
+UE 5222 position 803.057 585.071 cell 0 target 0
+UE 5223 position 543.605 -425.273 cell 0 target 0
+UE 5224 position -576.804 455.1 cell 0 target 0
+UE 5225 position 607.918 485.112 cell 0 target 0
+UE 5226 position 196.996 711.251 cell 0 target 0
+UE 5227 position -830.638 266.961 cell 0 target 0
+UE 5228 position -307.843 -712.002 cell 0 target 0
+UE 5229 position 372.149 -284.213 cell 0 target 0
+UE 5230 position -859.402 -768.451 cell 0 target 0
+UE 5231 position -734.76 686.175 cell 0 target 0
+UE 5232 position -859.67 118.25 cell 0 target 0
+UE 5233 position -458.879 623.11 cell 0 target 0
+UE 5234 position 558.584 -683.815 cell 0 target 0
+UE 5235 position 176.141 -605.706 cell 0 target 0
+UE 5236 position 434.477 -349.722 cell 0 target 0
+UE 5237 position -498.785 -478.321 cell 0 target 0
+UE 5238 position 181.21 -10.7066 cell 0 target 0
+UE 5239 position -505.714 57.2978 cell 0 target 0
+UE 5240 position 363.568 -509.633 cell 0 target 0
+UE 5241 position -522.955 97.3789 cell 0 target 0
+UE 5242 position 519.837 -292.407 cell 0 target 0
+UE 5243 position 763.053 -361.03 cell 0 target 0
+UE 5244 position 448.788 780.692 cell 0 target 0
+UE 5245 position -719.99 525.997 cell 0 target 0
+UE 5246 position 447.728 -831.597 cell 0 target 0
+UE 5247 position -484.78 898.743 cell 0 target 0
+UE 5248 position -486.152 -553.772 cell 0 target 0
+UE 5249 position 554.718 -861.865 cell 0 target 0
+UE 5250 position 677.574 -619.864 cell 0 target 0
+UE 5251 position 312.89 -863.893 cell 0 target 0
+UE 5252 position -133.193 626.63 cell 0 target 0
+UE 5253 position -757.376 379.711 cell 0 target 0
+UE 5254 position -586.475 -93.1813 cell 0 target 0
+UE 5255 position -478.483 543.599 cell 0 target 0
+UE 5256 position 102.355 -514.767 cell 0 target 0
+UE 5257 position 2.34067 -260.396 cell 0 target 0
+UE 5258 position 156.677 -138.062 cell 0 target 0
+UE 5259 position 185.323 724.78 cell 0 target 0
+UE 5260 position 675.998 -106.862 cell 0 target 0
+UE 5261 position -56.4707 -502.931 cell 0 target 0
+UE 5262 position -544.048 190.078 cell 0 target 0
+UE 5263 position 833.899 546.463 cell 0 target 0
+UE 5264 position 603.58 -436.113 cell 0 target 0
+UE 5265 position 892.872 -100.673 cell 0 target 0
+UE 5266 position -584.52 367.45 cell 0 target 0
+UE 5267 position 143.653 577.392 cell 0 target 0
+UE 5268 position 269.802 360.026 cell 0 target 0
+UE 5269 position -481.446 -666.816 cell 0 target 0
+UE 5270 position -480.746 296.569 cell 0 target 0
+UE 5271 position -607.357 -50.6526 cell 0 target 0
+UE 5272 position 241.355 -742.703 cell 0 target 0
+UE 5273 position 311.23 34.6854 cell 0 target 0
+UE 5274 position -784.627 -423.22 cell 0 target 0
+UE 5275 position -650.995 -868.449 cell 0 target 0
+UE 5276 position -439.062 686.487 cell 0 target 0
+UE 5277 position 377.652 395.443 cell 0 target 0
+UE 5278 position -133.338 -10.9096 cell 0 target 0
+UE 5279 position 613.148 171.183 cell 0 target 0
+UE 5280 position -221.799 32.0343 cell 0 target 0
+UE 5281 position 599.936 -482.478 cell 0 target 0
+UE 5282 position -667.908 -733.214 cell 0 target 0
+UE 5283 position -627.265 162.045 cell 0 target 0
+UE 5284 position -598.304 -893.961 cell 0 target 0
+UE 5285 position -514.087 -265.895 cell 0 target 0
+UE 5286 position -625.053 -463.502 cell 0 target 0
+UE 5287 position -159.345 292.126 cell 0 target 0
+UE 5288 position -802.714 -212.084 cell 0 target 0
+UE 5289 position -689.23 -891.52 cell 0 target 0
+UE 5290 position -43.8419 -651.623 cell 0 target 0
+UE 5291 position -308.112 156.427 cell 0 target 0
+UE 5292 position 573.895 -746.449 cell 0 target 0
+UE 5293 position -11.3632 -182.061 cell 0 target 0
+UE 5294 position -27.929 396.767 cell 0 target 0
+UE 5295 position 678.311 -820.683 cell 0 target 0
+UE 5296 position 363.683 -373.48 cell 0 target 0
+UE 5297 position 771.314 -133.658 cell 0 target 0
+UE 5298 position -487.044 653.207 cell 0 target 0
+UE 5299 position 544.967 864.477 cell 0 target 0
+UE 5300 position -568.301 -637.446 cell 0 target 0
+UE 5301 position -453.311 609.956 cell 0 target 0
+UE 5302 position 274.334 -865.602 cell 0 target 0
+UE 5303 position 693.451 -169.389 cell 0 target 0
+UE 5304 position -430.018 -311.967 cell 0 target 0
+UE 5305 position 216.768 28.09 cell 0 target 0
+UE 5306 position -655.729 560.944 cell 0 target 0
+UE 5307 position 775.409 300.328 cell 0 target 0
+UE 5308 position 720.379 613.742 cell 0 target 0
+UE 5309 position -578.504 684.82 cell 0 target 0
+UE 5310 position -829.707 -283.063 cell 0 target 0
+UE 5311 position 263.546 -375.146 cell 0 target 0
+UE 5312 position 543.875 509.496 cell 0 target 0
+UE 5313 position -786.392 515.341 cell 0 target 0
+UE 5314 position -15.4179 70.674 cell 0 target 0
+UE 5315 position 371.351 700.238 cell 0 target 0
+UE 5316 position -289.124 688.991 cell 0 target 0
+UE 5317 position -627.806 58.0213 cell 0 target 0
+UE 5318 position 508.085 180.644 cell 0 target 0
+UE 5319 position 93.5048 135.947 cell 0 target 0
+UE 5320 position 489.918 855.57 cell 0 target 0
+UE 5321 position -608.916 756.341 cell 0 target 0
+UE 5322 position 840.028 -855.054 cell 0 target 0
+UE 5323 position -375.78 459.161 cell 0 target 0
+UE 5324 position -776.265 -280.601 cell 0 target 0
+UE 5325 position 835.952 843.029 cell 0 target 0
+UE 5326 position 576.031 -844.264 cell 0 target 0
+UE 5327 position 439.203 -118.398 cell 0 target 0
+UE 5328 position -864.204 -480.142 cell 0 target 0
+UE 5329 position -393.376 -74.3074 cell 0 target 0
+UE 5330 position 731.126 -557.997 cell 0 target 0
+UE 5331 position 567.774 771.134 cell 0 target 0
+UE 5332 position 699.226 -308.349 cell 0 target 0
+UE 5333 position 701.659 -818.426 cell 0 target 0
+UE 5334 position -160.246 -456.463 cell 0 target 0
+UE 5335 position -438.895 -109.375 cell 0 target 0
+UE 5336 position -218.751 843.941 cell 0 target 0
+UE 5337 position 822.816 -334.844 cell 0 target 0
+UE 5338 position 759.898 608.512 cell 0 target 0
+UE 5339 position -294.201 -34.8379 cell 0 target 0
+UE 5340 position 747.257 541.962 cell 0 target 0
+UE 5341 position 679.64 -86.262 cell 0 target 0
+UE 5342 position -208.716 307.802 cell 0 target 0
+UE 5343 position -654.522 -744.161 cell 0 target 0
+UE 5344 position -425.421 -446.196 cell 0 target 0
+UE 5345 position -436.309 159.92 cell 0 target 0
+UE 5346 position 793.075 205.226 cell 0 target 0
+UE 5347 position -606.841 -368.45 cell 0 target 0
+UE 5348 position 684.815 491.717 cell 0 target 0
+UE 5349 position -628.793 -322.84 cell 0 target 0
+UE 5350 position 736.684 -747.16 cell 0 target 0
+UE 5351 position -791.458 -34.747 cell 0 target 0
+UE 5352 position -311.353 -304.458 cell 0 target 0
+UE 5353 position 420.677 -88.7976 cell 0 target 0
+UE 5354 position -546.977 -434.693 cell 0 target 0
+UE 5355 position 4.05177 -301.907 cell 0 target 0
+UE 5356 position -191.471 354.965 cell 0 target 0
+UE 5357 position -311.082 647.61 cell 0 target 0
+UE 5358 position 136.948 -522.17 cell 0 target 0
+UE 5359 position 235.566 -846.681 cell 0 target 0
+UE 5360 position -652.884 -225.327 cell 0 target 0
+UE 5361 position -508.897 573.661 cell 0 target 0
+UE 5362 position 612.968 747.041 cell 0 target 0
+UE 5363 position 414.56 -283.59 cell 0 target 0
+UE 5364 position -217.787 849.541 cell 0 target 0
+UE 5365 position 689.8 -326.186 cell 0 target 0
+UE 5366 position 24.5064 -320.534 cell 0 target 0
+UE 5367 position -52.5905 -88.887 cell 0 target 0
+UE 5368 position 675.353 -138.615 cell 0 target 0
+UE 5369 position 140.567 -887.694 cell 0 target 0
+UE 5370 position -460.54 -287.524 cell 0 target 0
+UE 5371 position 849.567 -726.154 cell 0 target 0
+UE 5372 position -483.801 -644.421 cell 0 target 0
+UE 5373 position 192.041 224.99 cell 0 target 0
+UE 5374 position -91.0652 -532.845 cell 0 target 0
+UE 5375 position -130.693 -551.012 cell 0 target 0
+UE 5376 position -709.123 -437.194 cell 0 target 0
+UE 5377 position 783.867 247.228 cell 0 target 0
+UE 5378 position 485.488 200.825 cell 0 target 0
+UE 5379 position 889.896 278.403 cell 0 target 0
+UE 5380 position -722.757 823.797 cell 0 target 0
+UE 5381 position -429.599 -469.559 cell 0 target 0
+UE 5382 position 851.537 -14.7235 cell 0 target 0
+UE 5383 position -238.814 254.022 cell 0 target 0
+UE 5384 position 354.974 843.618 cell 0 target 0
+UE 5385 position 721.012 453.737 cell 0 target 0
+UE 5386 position 233.914 197.168 cell 0 target 0
+UE 5387 position 377.322 255.322 cell 0 target 0
+UE 5388 position -622.205 594.94 cell 0 target 0
+UE 5389 position -22.9051 233.593 cell 0 target 0
+UE 5390 position 249.369 739.601 cell 0 target 0
+UE 5391 position -760.106 -501.936 cell 0 target 0
+UE 5392 position -376.772 -6.46439 cell 0 target 0
+UE 5393 position 9.1007 -44.5001 cell 0 target 0
+UE 5394 position -898.499 -880.226 cell 0 target 0
+UE 5395 position 198.115 -281.688 cell 0 target 0
+UE 5396 position 340.49 415.342 cell 0 target 0
+UE 5397 position 650.398 -159.981 cell 0 target 0
+UE 5398 position -866.047 -850.926 cell 0 target 0
+UE 5399 position -654.385 -243.284 cell 0 target 0
+UE 5400 position 783.245 607.078 cell 0 target 0
+UE 5401 position -468.11 274.791 cell 0 target 0
+UE 5402 position 831.885 891.129 cell 0 target 0
+UE 5403 position -188.062 38.8787 cell 0 target 0
+UE 5404 position 483.988 180.854 cell 0 target 0
+UE 5405 position 648.652 -703.663 cell 0 target 0
+UE 5406 position 84.5688 -652.81 cell 0 target 0
+UE 5407 position -281.92 -635.984 cell 0 target 0
+UE 5408 position 15.3245 158.391 cell 0 target 0
+UE 5409 position -293.4 824.495 cell 0 target 0
+UE 5410 position 751.546 637.816 cell 0 target 0
+UE 5411 position -442.402 342.883 cell 0 target 0
+UE 5412 position -549.479 707.491 cell 0 target 0
+UE 5413 position 494.735 817.3 cell 0 target 0
+UE 5414 position 434.77 -821.575 cell 0 target 0
+UE 5415 position -570.851 -285.569 cell 0 target 0
+UE 5416 position 786.013 316.575 cell 0 target 0
+UE 5417 position -695.022 771.635 cell 0 target 0
+UE 5418 position -673.614 571.428 cell 0 target 0
+UE 5419 position -264.235 -391.902 cell 0 target 0
+UE 5420 position -232.662 -745.579 cell 0 target 0
+UE 5421 position 737.134 -383.263 cell 0 target 0
+UE 5422 position 610.278 538.888 cell 0 target 0
+UE 5423 position -726.021 -30.339 cell 0 target 0
+UE 5424 position 785.958 -610.577 cell 0 target 0
+UE 5425 position 857.046 766.023 cell 0 target 0
+UE 5426 position -291.934 261.259 cell 0 target 0
+UE 5427 position -606.088 -325.457 cell 0 target 0
+UE 5428 position -655.241 -240.489 cell 0 target 0
+UE 5429 position 565.243 -366.994 cell 0 target 0
+UE 5430 position 234.738 -359.038 cell 0 target 0
+UE 5431 position 176.244 -663.171 cell 0 target 0
+UE 5432 position -754.155 517.147 cell 0 target 0
+UE 5433 position 835.705 293.285 cell 0 target 0
+UE 5434 position -325.095 -879.556 cell 0 target 0
+UE 5435 position 316.016 -521.567 cell 0 target 0
+UE 5436 position -833.691 -647.968 cell 0 target 0
+UE 5437 position -880.726 831.079 cell 0 target 0
+UE 5438 position 721.224 407.187 cell 0 target 0
+UE 5439 position 852.838 249.473 cell 0 target 0
+UE 5440 position -332.09 368.806 cell 0 target 0
+UE 5441 position 532.051 -216.071 cell 0 target 0
+UE 5442 position -253.137 725.876 cell 0 target 0
+UE 5443 position 22.3092 550.347 cell 0 target 0
+UE 5444 position -6.83593 308.506 cell 0 target 0
+UE 5445 position 884.645 224.902 cell 0 target 0
+UE 5446 position -552.696 630.081 cell 0 target 0
+UE 5447 position 820.506 441.836 cell 0 target 0
+UE 5448 position 328.328 -587.473 cell 0 target 0
+UE 5449 position 150.886 -256.269 cell 0 target 0
+UE 5450 position -418.788 -577.455 cell 0 target 0
+UE 5451 position -198.71 -715.58 cell 0 target 0
+UE 5452 position -231.267 -706.714 cell 0 target 0
+UE 5453 position -482.014 592.124 cell 0 target 0
+UE 5454 position -380.15 819.208 cell 0 target 0
+UE 5455 position -243.554 -216.423 cell 0 target 0
+UE 5456 position 244.233 820.197 cell 0 target 0
+UE 5457 position -131.262 679.88 cell 0 target 0
+UE 5458 position -634.899 -345.512 cell 0 target 0
+UE 5459 position -252.253 -609.975 cell 0 target 0
+UE 5460 position -635.168 537.018 cell 0 target 0
+UE 5461 position -116.806 636.17 cell 0 target 0
+UE 5462 position -405.953 -846.093 cell 0 target 0
+UE 5463 position 677.547 734.775 cell 0 target 0
+UE 5464 position -6.40635 328.543 cell 0 target 0
+UE 5465 position 441.524 -705.841 cell 0 target 0
+UE 5466 position -0.664163 -362.59 cell 0 target 0
+UE 5467 position -117.643 -818.414 cell 0 target 0
+UE 5468 position 692.664 -802.238 cell 0 target 0
+UE 5469 position -85.7493 611.208 cell 0 target 0
+UE 5470 position -770.708 -481.837 cell 0 target 0
+UE 5471 position 243.772 270.232 cell 0 target 0
+UE 5472 position -307.543 730.718 cell 0 target 0
+UE 5473 position 90.4815 -276.609 cell 0 target 0
+UE 5474 position 167.886 -743.016 cell 0 target 0
+UE 5475 position -856.715 -616.76 cell 0 target 0
+UE 5476 position 401.553 695.469 cell 0 target 0
+UE 5477 position 425.541 667.437 cell 0 target 0
+UE 5478 position 23.2369 -57.2672 cell 0 target 0
+UE 5479 position 570.978 629.315 cell 0 target 0
+UE 5480 position -381.441 729.02 cell 0 target 0
+UE 5481 position 358.684 203.386 cell 0 target 0
+UE 5482 position -519.968 -94.8125 cell 0 target 0
+UE 5483 position -260.134 133.752 cell 0 target 0
+UE 5484 position -772.501 -17.5725 cell 0 target 0
+UE 5485 position 789.602 -566.057 cell 0 target 0
+UE 5486 position -107.164 694.87 cell 0 target 0
+UE 5487 position 398.229 629.106 cell 0 target 0
+UE 5488 position 467.871 -686.901 cell 0 target 0
+UE 5489 position -563.924 -878.383 cell 0 target 0
+UE 5490 position 696.336 -273.038 cell 0 target 0
+UE 5491 position -811.224 764.494 cell 0 target 0
+UE 5492 position 212.334 -703.473 cell 0 target 0
+UE 5493 position -205.539 -299.016 cell 0 target 0
+UE 5494 position -563.154 -533.82 cell 0 target 0
+UE 5495 position 567.4 -100.028 cell 0 target 0
+UE 5496 position 869.167 -707.134 cell 0 target 0
+UE 5497 position 501.387 -781.89 cell 0 target 0
+UE 5498 position -768.396 560.036 cell 0 target 0
+UE 5499 position 296.804 585.037 cell 0 target 0
+UE 5500 position 749.278 308.361 cell 0 target 0
+ SIMULATOR_DEBUG: Stop ()

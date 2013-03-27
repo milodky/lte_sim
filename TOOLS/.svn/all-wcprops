@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 27
+/svn/!svn/ver/8/trunk/TOOLS
+END
+make_sum
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/8/trunk/TOOLS/make_sum
+END
+make_cell_spectral_efficiency.cc
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/8/trunk/TOOLS/make_cell_spectral_efficiency.cc
+END
+make_goodput.cc
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/svn/!svn/ver/8/trunk/TOOLS/make_goodput.cc
+END
+make_fairness_index.cc
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/!svn/ver/8/trunk/TOOLS/make_fairness_index.cc
+END
+make_sum.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/8/trunk/TOOLS/make_sum.cc
+END
+make_cdf
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/8/trunk/TOOLS/make_cdf
+END
+make_plr
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/8/trunk/TOOLS/make_plr
+END
+make_cdf.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/8/trunk/TOOLS/make_cdf.cc
+END
+make_cell_spectral_efficiency
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/!svn/ver/8/trunk/TOOLS/make_cell_spectral_efficiency
+END
+Makefile
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/svn/!svn/ver/8/trunk/TOOLS/Makefile
+END
+make_plr.cc
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/!svn/ver/8/trunk/TOOLS/make_plr.cc
+END
+make_fairness_index
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/8/trunk/TOOLS/make_fairness_index
+END
+make_goodput
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/svn/!svn/ver/8/trunk/TOOLS/make_goodput
+END
