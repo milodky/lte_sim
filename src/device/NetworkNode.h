@@ -47,7 +47,8 @@ public:
 	  {
 		STATE_DETACHED,
 		STATE_ACTIVE,
-		STATE_IDLE
+		STATE_IDLE,
+		STATE_SLEEP
 	  };
 
 	enum NodeType

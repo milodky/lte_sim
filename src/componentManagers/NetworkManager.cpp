@@ -583,6 +583,7 @@ NetworkManager::GetCellIDFromPosition (double posX,
 void
 NetworkManager::UpdateUserPosition (double time)
 {
+	std::cout << "UpdateUserPosition" << std::endl;
   std::vector<UserEquipment*> *records = GetUserEquipmentContainer ();
   std::vector<UserEquipment*>::iterator iter;
   UserEquipment *record;

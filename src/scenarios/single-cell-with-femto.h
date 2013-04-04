@@ -746,6 +746,9 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 	oldTarget = HeNBs->back();
 	//try to set cell state to idel
 	
+	oldTarget->SetNodeState(NetworkNode::STATE_SLEEP);
+	simulator->Run();
+	
 	//handover user from femto cell to marco cell
 	std::vector<UserEquipment*> *tempList = nm->GetRegisteredUEToENodeB(oldTarget->GetIDNetworkNode());
 	newTarget = eNBs->back();
@@ -767,11 +770,9 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 	simulator->RunAndStop(50000);
 	std::cout <<"the cell is back" << std::endl;
 	HeNBs->push_back(oldTarget);
-//	oldTarget->SetNodeState(NetworkNode::STATE_ACTIVE);
-//	for (it=tempList->begin(); it!=tempList->end(); ++it){
-		//		std::cout << "target user is " << *it->GetIDNetworkNode() << std::endl;
-//		nm->HandoverProcedure(0.03, *it, newTarget, oldTarget);
-//	}
+	
+	
+	
 
   simulator->Run ();
 }

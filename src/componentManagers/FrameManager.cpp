@@ -29,12 +29,12 @@
 FrameManager* FrameManager::ptr=NULL;
 
 FrameManager::FrameManager() {
-  m_nbFrames = 0;
-  m_nbSubframes = 0;
-  m_TTICounter = 0;
-  m_frameStructure = FrameManager::FRAME_STRUCTURE_FDD; //Default Value
-  m_TDDFrameConfiguration = 1; //Default Value
-  Simulator::Init()->Schedule(0.0, &FrameManager::Start, this);
+	m_nbFrames = 0;
+	m_nbSubframes = 0;
+	m_TTICounter = 0;
+	m_frameStructure = FrameManager::FRAME_STRUCTURE_FDD; //Default Value
+	m_TDDFrameConfiguration = 1; //Default Value
+	Simulator::Init()->Schedule(0.0, &FrameManager::Start, this);
 }
 
 FrameManager::~FrameManager()
@@ -43,272 +43,278 @@ FrameManager::~FrameManager()
 void
 FrameManager::SetFrameStructure (FrameManager::FrameStructure frameStructure)
 {
-  m_frameStructure = frameStructure;
+	m_frameStructure = frameStructure;
 }
 
 FrameManager::FrameStructure
 FrameManager::GetFrameStructure (void) const
 {
-  return m_frameStructure;
+	return m_frameStructure;
 }
 
 
 void
 FrameManager::SetTDDFrameConfiguration (int configuration)
 {
-  if (configuration < 0 && configuration > 6)
-    {
-	  m_TDDFrameConfiguration = 0; //Default Value
-    }
-  else
-    {
-	  m_TDDFrameConfiguration = configuration;
-    }
+	if (configuration < 0 && configuration > 6)
+	{
+		m_TDDFrameConfiguration = 0; //Default Value
+	}
+	else
+	{
+		m_TDDFrameConfiguration = configuration;
+	}
 }
 
 int
 FrameManager::GetTDDFrameConfiguration (void) const
 {
-  return m_TDDFrameConfiguration;
+	return m_TDDFrameConfiguration;
 }
 
 int
 FrameManager::GetSubFrameType (int nbSubFrame)
 {
-  return TDDConfiguration [GetTDDFrameConfiguration ()][nbSubFrame-1];
+	return TDDConfiguration [GetTDDFrameConfiguration ()][nbSubFrame-1];
 }
 
 
 void
 FrameManager::UpdateNbFrames (void)
 {
-  m_nbFrames++;
+	m_nbFrames++;
 }
 
 int
 FrameManager::GetNbFrames (void) const
 {
-  return m_nbFrames;
+	return m_nbFrames;
 }
 
 void
 FrameManager::UpdateNbSubframes (void)
 {
-  m_nbSubframes++;
+	m_nbSubframes++;
 }
 
 void
 FrameManager::ResetNbSubframes (void)
 {
-  m_nbSubframes = 0;
+	m_nbSubframes = 0;
 }
 
 int
 FrameManager::GetNbSubframes (void) const
 {
-  return m_nbSubframes;
+	return m_nbSubframes;
 }
 
 void
 FrameManager::UpdateTTIcounter (void)
 {
-  m_TTICounter++;
+	m_TTICounter++;
 }
 
 unsigned long
 FrameManager::GetTTICounter () const
 {
-  return m_TTICounter;
+	return m_TTICounter;
 }
 
 void
 FrameManager::Start (void)
 {
 #ifdef FRAME_MANAGER_DEBUG
-  std::cout << " LTE Simulation starts now! "<< std::endl;
+	std::cout << " LTE Simulation starts now! "<< std::endl;
 #endif
-
-  Simulator::Init()->Schedule(0.0, &FrameManager::StartFrame, this);
+	
+	Simulator::Init()->Schedule(0.0, &FrameManager::StartFrame, this);
 }
 
 void
 FrameManager::StartFrame (void)
 {
-  UpdateNbFrames ();
-
+	UpdateNbFrames ();
+	
 #ifdef FRAME_MANAGER_DEBUG
-  std::cout << " +++++++++ Start Frame, time =  "
-      << Simulator::Init()->Now() << " +++++++++" << std::endl;
+	std::cout << " +++++++++ Start Frame, time =  "
+	<< Simulator::Init()->Now() << " +++++++++" << std::endl;
 #endif
-
-  Simulator::Init()->Schedule(0.0,
-							  &FrameManager::StartSubframe,
-							  this);
+	
+	Simulator::Init()->Schedule(0.0,
+				    &FrameManager::StartSubframe,
+				    this);
 }
 
 void
 FrameManager::StopFrame (void)
 {
-  Simulator::Init()->Schedule(0.0,
-							  &FrameManager::StartFrame,
-							  this);
+	Simulator::Init()->Schedule(0.0,
+				    &FrameManager::StartFrame,
+				    this);
 }
 
 void
 FrameManager::StartSubframe (void)
 {
 #ifdef FRAME_MANAGER_DEBUG
-  std::cout << " --------- Start SubFrame, time =  "
-      << Simulator::Init()->Now() << " --------- " << std::endl;
+	std::cout << " --------- Start SubFrame, time =  "
+	<< Simulator::Init()->Now() << " --------- " << std::endl;
 #endif
-
-  UpdateTTIcounter ();
-  UpdateNbSubframes ();
-
-  /*
-   * At the beginning of each sub-frame the simulation
-   * update user position. This function could be
-   * implemented also every TTI.
-   */
-  UpdateUserPosition();
+	
+	UpdateTTIcounter ();
+	UpdateNbSubframes ();
+	
+	/*
+	 * At the beginning of each sub-frame the simulation
+	 * update user position. This function could be
+	 * implemented also every TTI.
+	 */
+	UpdateUserPosition();
 #ifdef PLOT_USER_POSITION
-  NetworkManager::Init()->PrintUserPosition();
+	NetworkManager::Init()->PrintUserPosition();
 #endif
-
-  /*
-   * According to the Frame Structure, the DW/UL link scheduler
-   * will be called for each sub-frame.
-   * (RBs allocation)
-   */
-  ResourceAllocation();
-  Simulator::Init()->Schedule(0.001,
-							  &FrameManager::StopSubframe,
-							  this);
+	
+	/*
+	 * According to the Frame Structure, the DW/UL link scheduler
+	 * will be called for each sub-frame.
+	 * (RBs allocation)
+	 */
+	ResourceAllocation();
+	Simulator::Init()->Schedule(0.001,
+				    &FrameManager::StopSubframe,
+				    this);
 }
 
 void
 FrameManager::StopSubframe (void)
 {
-  if (GetNbSubframes () == 10)
-    {
-	  ResetNbSubframes ();
-	  Simulator::Init()->Schedule(0.0,
-								  &FrameManager::StopFrame,
-								  this);
-    }
-  else
-    {
-	  Simulator::Init()->Schedule(0.0,
-								  &FrameManager::StartSubframe,
-								  this);
-    }
+	if (GetNbSubframes () == 10)
+	{
+		ResetNbSubframes ();
+		Simulator::Init()->Schedule(0.0,
+					    &FrameManager::StopFrame,
+					    this);
+	}
+	else
+	{
+		Simulator::Init()->Schedule(0.0,
+					    &FrameManager::StartSubframe,
+					    this);
+	}
 }
 
 
 NetworkManager*
 FrameManager::GetNetworkManager (void)
 {
-  return NetworkManager::Init();
+	return NetworkManager::Init();
 }
 
 void
 FrameManager::UpdateUserPosition(void)
 {
-  GetNetworkManager ()->UpdateUserPosition (GetTTICounter () / 1000.0);
+	GetNetworkManager ()->UpdateUserPosition (GetTTICounter () / 1000.0);
 }
 
 
 void
 FrameManager::ResourceAllocation(void)
 {
-  std::vector<ENodeB*> *records = GetNetworkManager ()->GetENodeBContainer ();
-  std::vector<ENodeB*>::iterator iter;
-  ENodeB *record;
-  for (iter = records->begin (); iter != records->end (); iter++)
+	std::cout << "ResourceAllocation" << std::endl;
+	std::vector<ENodeB*> *records = GetNetworkManager ()->GetENodeBContainer ();
+	std::vector<ENodeB*>::iterator iter;
+	ENodeB *record;
+	for (iter = records->begin (); iter != records->end (); iter++)
 	{
-	  record = *iter;
-
+		record = *iter;
+		
 #ifdef FRAME_MANAGER_DEBUG
-	  std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
-		  record->GetIDNetworkNode() << std::endl;
+		std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
+		record->GetIDNetworkNode() << std::endl;
 #endif
-
-
-	  if (GetFrameStructure () == FrameManager::FRAME_STRUCTURE_FDD)
+		
+		
+		if (GetFrameStructure () == FrameManager::FRAME_STRUCTURE_FDD)
 		{
-		  record->ResourceBlocksAllocation ();
+			record->ResourceBlocksAllocation ();
 		}
-	  else
+		else
 		{
-		  //see frame configuration in TDDConfiguration
-		  if (GetSubFrameType (GetNbSubframes ()) == 0)
+			//see frame configuration in TDDConfiguration
+			if (GetSubFrameType (GetNbSubframes ()) == 0)
 			{
 #ifdef FRAME_MANAGER_DEBUG
-			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-				  "	SUBFRAME_FOR_DOWNLINK " << std::endl;
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SUBFRAME_FOR_DOWNLINK " << std::endl;
 #endif
-			  record->DownlinkResourceBlokAllocation();
+				record->DownlinkResourceBlokAllocation();
 			}
-		  else if(GetSubFrameType (GetNbSubframes ()) == 1)
+			else if(GetSubFrameType (GetNbSubframes ()) == 1)
 			{
 #ifdef FRAME_MANAGER_DEBUG
-			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-				  "	SUBFRAME_FOR_UPLINK " << std::endl;
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SUBFRAME_FOR_UPLINK " << std::endl;
 #endif
-			  record->UplinkResourceBlockAllocation();
+				record->UplinkResourceBlockAllocation();
 			}
-		  else
+			else
 			{
 #ifdef FRAME_MANAGER_DEBUG
-			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-				  "	SPECIAL_SUBFRAME" << std::endl;
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SPECIAL_SUBFRAME" << std::endl;
 #endif
 			}
 		}
 	}
-
-  std::vector<HeNodeB*> *records_2 = GetNetworkManager ()->GetHomeENodeBContainer();
-    std::vector<HeNodeB*>::iterator iter_2;
-    HeNodeB *record_2;
-    for (iter_2 = records_2->begin (); iter_2 != records_2->end (); iter_2++)
+	
+	std::vector<HeNodeB*> *records_2 = GetNetworkManager ()->GetHomeENodeBContainer();
+	std::vector<HeNodeB*>::iterator iter_2;
+	HeNodeB *record_2;
+	for (iter_2 = records_2->begin (); iter_2 != records_2->end (); iter_2++)
   	{
-  	  record_2 = *iter_2;
-
-  #ifdef FRAME_MANAGER_DEBUG
-  	  std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
-  		  record_2->GetIDNetworkNode() << std::endl;
-  #endif
-
-
-  	  if (GetFrameStructure () == FrameManager::FRAME_STRUCTURE_FDD)
+		
+		record_2 = *iter_2;
+		
+		//If the state is sleep, skip
+		if (record_2->GetNodeState() == NetworkNode::STATE_SLEEP) {
+			continue;
+		}
+#ifdef FRAME_MANAGER_DEBUG
+		std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
+		record_2->GetIDNetworkNode() << std::endl;
+#endif
+		
+		
+		if (GetFrameStructure () == FrameManager::FRAME_STRUCTURE_FDD)
   		{
-  		  record_2->ResourceBlocksAllocation ();
+			record_2->ResourceBlocksAllocation ();
   		}
-  	  else
+		else
   		{
-  		  //see frame configuration in TDDConfiguration
-  		  if (GetSubFrameType (GetNbSubframes ()) == 0)
+			//see frame configuration in TDDConfiguration
+			if (GetSubFrameType (GetNbSubframes ()) == 0)
   			{
-  #ifdef FRAME_MANAGER_DEBUG
-  			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-  				  "	SUBFRAME_FOR_DOWNLINK " << std::endl;
-  #endif
-  			  record_2->DownlinkResourceBlokAllocation();
+#ifdef FRAME_MANAGER_DEBUG
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SUBFRAME_FOR_DOWNLINK " << std::endl;
+#endif
+				record_2->DownlinkResourceBlokAllocation();
   			}
-  		  else if(GetSubFrameType (GetNbSubframes ()) == 1)
+			else if(GetSubFrameType (GetNbSubframes ()) == 1)
   			{
-  #ifdef FRAME_MANAGER_DEBUG
-  			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-  				  "	SUBFRAME_FOR_UPLINK " << std::endl;
-  #endif
-  			  record_2->UplinkResourceBlockAllocation();
+#ifdef FRAME_MANAGER_DEBUG
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SUBFRAME_FOR_UPLINK " << std::endl;
+#endif
+				record_2->UplinkResourceBlockAllocation();
   			}
-  		  else
+			else
   			{
-  #ifdef FRAME_MANAGER_DEBUG
-  			  std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
-  				  "	SPECIAL_SUBFRAME" << std::endl;
-  #endif
+#ifdef FRAME_MANAGER_DEBUG
+				std::cout << " FRAME_MANAGER_DEBUG: SubFrameType = "
+				"	SPECIAL_SUBFRAME" << std::endl;
+#endif
   			}
   		}
   	}
