@@ -74,7 +74,9 @@ private:
 	LtePhy *m_phy;
 
 	Mobility *m_mobility;
-
+	
+	double m_activeTime;
+	
 public:
 	NetworkNode();
 	virtual ~NetworkNode();
@@ -89,6 +91,7 @@ public:
 
 	void SetNodeState (NodeState state);
 	void MakeActive (void);
+	void MakeSleep (void);
 	NodeState GetNodeState (void) const;
 
 	void SetCell (Cell *cell);
@@ -105,6 +108,9 @@ public:
 
 	void SetMobilityModel (Mobility* m);
 	Mobility* GetMobilityModel (void);
+	
+	void SetActiveTime(double time);
+	double GetActiveTime(void);
 
     void SendPacketBurst (PacketBurst* p);
     void ReceivePacketBurst (PacketBurst* p);

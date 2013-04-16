@@ -583,7 +583,7 @@ NetworkManager::GetCellIDFromPosition (double posX,
 void
 NetworkManager::UpdateUserPosition (double time)
 {
-	std::cout << "UpdateUserPosition" << std::endl;
+//	std::cout << "UpdateUserPosition" << std::endl;
   std::vector<UserEquipment*> *records = GetUserEquipmentContainer ();
   std::vector<UserEquipment*>::iterator iter;
   UserEquipment *record;
@@ -620,7 +620,7 @@ NetworkManager::UpdateUserPosition (double time)
 #endif
 
 
-      if (record->GetMobilityModel ()->GetHandover () == true || record->GetTargetNode()->GetNodeState() == NetworkNode::STATE_DETACHED)
+      if (record->GetMobilityModel ()->GetHandover () == true || record->GetTargetNode()->GetNodeState() == NetworkNode::STATE_SLEEP)
         {
     	  NetworkNode* targetNode = record->GetTargetNode ();
 
@@ -768,7 +768,6 @@ NetworkManager::SelectTargetNode (UserEquipment* ue)
 void
 NetworkManager::HandoverProcedure(double time, UserEquipment* ue, NetworkNode* oldTarget, NetworkNode* newTarget)
 {
-std::cout<< "Handover "<< ue->GetIDNetworkNode() <<" from " << oldTarget->GetIDNetworkNode() << " to " << newTarget->GetIDNetworkNode() << endl;
 #ifdef HANDOVER_DEBUG
               std::cout << "** HO ** \t HandoverProcedure for user "
             		  <<  ue->GetIDNetworkNode () << std::endl;
@@ -778,7 +777,7 @@ std::cout<< "Handover "<< ue->GetIDNetworkNode() <<" from " << oldTarget->GetIDN
   if (ue->GetNodeState() == UserEquipment::STATE_ACTIVE)
     {
     //XXX Admission Control is not implemented
-	double detachTime = 0.030;
+	double detachTime = 0.001; //0.030
     ue->SetNodeState (UserEquipment::STATE_DETACHED);
     Simulator::Init()->Schedule(detachTime, &NetworkNode::MakeActive, ue);
     }
@@ -790,13 +789,18 @@ std::cout<< "Handover "<< ue->GetIDNetworkNode() <<" from " << oldTarget->GetIDN
 #endif
 
   // 2 - transfer all active radio bearer
-  Simulator::Init()->Schedule(0.001,
+  Simulator::Init()->Schedule(0.0,
                               &NetworkManager::TransferBearerInfo,
                               this,
                               ue,
                               newTarget);
+	
+//	TransferBearerInfo(ue, newTarget);
 
   ue->GetMobilityModel ()->SetLastHandoverTime(time);
+	std::cout << "user " <<  ue->GetIDNetworkNode () << " starts HO "
+	"\n\t old eNB = " << ue->GetTargetNode ()->GetIDNetworkNode () <<
+	"\n\t target eNB = " <<  newTarget->GetIDNetworkNode () << std::endl;
 }
 
 
@@ -805,13 +809,16 @@ NetworkManager::TransferBearerInfo (UserEquipment* ue, NetworkNode* target)
 {
 #ifdef HANDOVER_DEBUG
               std::cout << "** HO ** \t TransferBearerInfo for user "
-            		  <<  ue->GetIDNetworkNode () << std::endl;
+            		  <<  ue->GetIDNetworkNode () << " to " << target->GetIDNetworkNode() << std::endl;
 #endif
 
   if ( (target->GetNodeType() == NetworkNode::TYPE_ENODEB && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_ENODEB) ||
 		 (target->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_ENODEB) ||
-		 (target->GetNodeType() == NetworkNode::TYPE_ENODEB && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION))
+		 (target->GetNodeType() == NetworkNode::TYPE_ENODEB && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION) ||
+      		 (target->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION))
     {
+	    std::cout << "** HO ** \t TransferBearerInfo for user "
+	    <<  ue->GetIDNetworkNode () << " to " << target->GetIDNetworkNode() << std::endl;
 	   ENodeB *oldTargetNode = (ENodeB*) ue->GetTargetNode ();
 	   ENodeB *newTargetNode = (ENodeB*) target;
 
@@ -869,9 +876,9 @@ NetworkManager::TransferBearerInfo (UserEquipment* ue, NetworkNode* target)
        oldTargetNode->DeleteUserEquipment (ue);
 
 	   // 4 - update cell and new target enb for the ue
-#ifdef HANDOVER_DEBUG
+//#ifdef HANDOVER_DEBUG
        std::cout << "update cell and new target enb for the ue"<< std::endl;
-#endif
+//#endif
 	   ue->SetTargetNode (newTargetNode);
 
 	   // MOVE RRC CONTEXT FOR THE OLD TARGET NODE TO THE NEWER ONE

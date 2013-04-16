@@ -65,7 +65,7 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 
   // define simulation times
   double duration = 100; //used to be 100
-  double flow_duration = 1;
+  double flow_duration = 100;
 
   int cluster = 3;
   double bandwidth = 5;
@@ -169,7 +169,7 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
   //////////////////////
   //create femto-cells
   //
-  int femtoCellsInBuilding = 2;
+  int femtoCellsInBuilding = 1;
 //  if ( buildingType == 0 )
 //  {
 //	  femtoCellsInBuilding = 25; 
@@ -262,7 +262,7 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 
 	  ulChannels->at (i)->AddDevice((NetworkNode*) enb);
 
-
+		enb->MakeActive();
 	  nm->GetENodeBContainer ()->push_back (enb);
 	  eNBs->push_back (enb);
     }
@@ -302,7 +302,7 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 
 
 		  ulChannels->at (i)->AddDevice((NetworkNode*) enb);
-
+		enb->MakeActive();
 		  nm->GetHomeENodeBContainer()->push_back (enb);
 	  }
   }
@@ -736,43 +736,28 @@ static void SingleCellWithFemto ( double radius, int nbBuildings, int buildingTy
 	std::cout << "Begin simulation! MY TEST" << endl;
   simulator->SetStop(duration);
   simulator->Schedule(duration-10, &Simulator::PrintMemoryUsage, simulator);
-  simulator->RunAndStop(50000);
-	std::cout <<"\nWe just pause here, and try to close femto cell\n" << std::endl;
-	std::cout << "The size of femtocells is " << HeNBs->size() << std::endl;
+//  simulator->RunAndStop(50000);
+//	std::cout <<"\nWe just pause here, and try to close femto cell\n" << std::endl;
+//	std::cout << "The size of femtocells is " << HeNBs->size() << std::endl;
 
 	HeNodeB *oldTarget;
-	NetworkNode *newTarget;
-	UserEquipment *tmpUE;
+//	NetworkNode *newTarget;
+//	UserEquipment *tmpUE;
 	oldTarget = HeNBs->back();
 	//try to set cell state to idel
 	
-	oldTarget->SetNodeState(NetworkNode::STATE_SLEEP);
-	simulator->Run();
-	
-	//handover user from femto cell to marco cell
-	std::vector<UserEquipment*> *tempList = nm->GetRegisteredUEToENodeB(oldTarget->GetIDNetworkNode());
-	newTarget = eNBs->back();
-	HeNBs->pop_back();
-	
-	std::vector<UserEquipment*>::iterator it;
-	for (it=tempList->begin(); it!=tempList->end(); ++it){
-//		std::cout << "target user is " << *it->GetIDNetworkNode() << std::endl;
-		nm->HandoverProcedure(0.03, *it, oldTarget, newTarget);
-	}
+//	oldTarget->SetNodeState(NetworkNode::STATE_SLEEP);
 
-//	oldTarget->SetNodeState(NetworkNode::STATE_DETACHED);
+//	simulator->RunAndStop(500000);
+//	std::cout <<"the cell is back" << std::endl;
+//	oldTarget->SetNodeState(NetworkNode::STATE_ACTIVE);
 
-//	oldTarget->SetNodeState(NetworkNode::STATE_IDLE);
-
-//	std::cout << HeNBs->at(0)->GetProtocolStack ()->GetRrcEntity ()->
-//	GetHandoverEntity ()->CheckHandoverNeed (ue) << endl;
-
-	simulator->RunAndStop(50000);
-	std::cout <<"the cell is back" << std::endl;
-	HeNBs->push_back(oldTarget);
 	
 	
-	
+//	Simulator::Init()->Schedule(1, &NetworkNode::MakeSleep, oldTarget);
+//	Simulator::Init()->Schedule(10, &NetworkNode::MakeActive, oldTarget);
+
 
   simulator->Run ();
+	
 }

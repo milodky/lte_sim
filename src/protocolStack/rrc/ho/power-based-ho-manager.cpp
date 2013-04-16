@@ -43,6 +43,9 @@ PowerBasedHoManager::~PowerBasedHoManager()
 bool
 PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
 {
+	if (ue->GetNodeState() == NetworkNode::STATE_DETACHED){
+		return false;
+	}
   NetworkNode *targetNode = ue->GetTargetNode ();
 
   double TXpower = 10 * log10 (
@@ -52,6 +55,13 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
   double pathLoss = ComputePathLossForInterference(targetNode, ue);
 
   double targetRXpower = TXpower - pathLoss;
+
+	
+	if (targetNode->GetNodeState() == NetworkNode::STATE_SLEEP) {
+		targetRXpower = -1 * std::numeric_limits<double>::max();
+		std::cout << "targetRXpower(" << ue->GetIDNetworkNode()<< ")"<< targetRXpower << std::endl;
+	}
+
   double RXpower;
 
 
@@ -59,6 +69,7 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
   std::vector<ENodeB*>::iterator it;
   for (it = listOfNodes->begin (); it != listOfNodes->end (); it++)
     {
+	    
 	  if ((*it)->GetIDNetworkNode () != targetNode->GetIDNetworkNode () )
 	    {
 
@@ -71,6 +82,7 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
 	      pathLoss = ComputePathLossForInterference(probableNewTargetNode, ue);
 
 	      RXpower = TXpower - pathLoss;
+//		    std::cout << "RXpower1(" << ue->GetIDNetworkNode()<< ")"<< RXpower << std::endl;
 
 	      if (RXpower > targetRXpower)
 	        {
@@ -82,11 +94,22 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
 	        }
 	    }
     }
+	
+//	if (ue->GetTargetNode()->GetNodeState() == NetworkNode::STATE_SLEEP) {
+//		m_target = targetNode;
+//		return true;
+//	}
 
+	
   std::vector<HeNodeB*> *listOfNodes2 = NetworkManager::Init ()->GetHomeENodeBContainer();
   std::vector<HeNodeB*>::iterator it2;
   for (it2 = listOfNodes2->begin (); it2 != listOfNodes2->end (); it2++)
     {
+	    if ((*it2)->GetNodeState() == NetworkNode::STATE_SLEEP){
+		    continue;
+	    }
+//	    std::cout<< "Nodestate " << (*it2)->GetNodeState() << std::endl;
+
 	  if ((*it2)->GetIDNetworkNode () != targetNode->GetIDNetworkNode () )
 	    {
 
@@ -100,6 +123,7 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
 	      pathLoss = ComputePathLossForInterference(probableNewTargetNode, ue);
 
 	      RXpower = TXpower - pathLoss;
+//		    std::cout << "RXpower2(" << ue->GetIDNetworkNode()<< ")"<< RXpower << std::endl;
 
 	      if (RXpower > targetRXpower)
 	        {
@@ -115,6 +139,8 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
   if (ue->GetTargetNode ()->GetIDNetworkNode () != targetNode->GetIDNetworkNode ())
     {
 	  m_target = targetNode;
+//	    std::cout << "CheckHandoverNeed:from " << ue->GetIDNetworkNode()<<":to "<<targetNode->GetIDNetworkNode() << std::endl;
+
 	  return true;
     }
   else

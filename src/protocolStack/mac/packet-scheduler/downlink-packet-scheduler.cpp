@@ -102,11 +102,23 @@ DownlinkPacketScheduler::DoSchedule (void)
 
   UpdateAverageTransmissionRate ();
   SelectFlowsToSchedule ();
+  ENodeB *enb = (ENodeB*) GetMacEntity ()->GetDevice ();
 
   if (GetFlowsToSchedule ()->size() == 0)
-	{}
+	{
+		std::cout << "nodetype "<<enb->GetNodeType() << " status " << enb->GetNodeState() << std::endl;
+		
+		if (Simulator::Init()->Now() - enb->GetActiveTime() >= 0.010 && enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION && enb->GetNodeState() == NetworkNode::STATE_ACTIVE) {
+			enb->MakeSleep();
+			std::cout << "idle time " << Simulator::Init()->Now() - enb->GetActiveTime() << std::endl;
+			Simulator::Init()->Schedule(0.005, &NetworkNode::MakeActive, enb);
+			enb->SetActiveTime(Simulator::Init()->Now());
+		}
+		
+	}
   else
 	{
+		enb->SetActiveTime(Simulator::Init()->Now());
 	  RBsAllocation ();
 	}
 

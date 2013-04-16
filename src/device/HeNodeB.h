@@ -24,7 +24,6 @@
 
 #include "ENodeB.h"
 
-
 class HeNodeB : public ENodeB {
 public:
 
@@ -37,9 +36,10 @@ public:
 	SetFemtoCell (Femtocell *cell);
 	Femtocell*
 	GetFemtoCell (void);
+	
+
 
 private:
-
 	Femtocell* m_femtocell;
 };
 

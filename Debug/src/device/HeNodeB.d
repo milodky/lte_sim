@@ -35,7 +35,11 @@ src/device/HeNodeB.d src/device/HeNodeB.o: ../src/device/HeNodeB.cpp \
   ../src/device/../protocolStack/mac/ue-mac-entity.h \
   ../src/device/../protocolStack/pdcp/pdcp-entity.h \
   ../src/device/../phy/henb-lte-phy.h ../src/device/../phy/enb-lte-phy.h \
-  ../src/device/../phy/lte-phy.h
+  ../src/device/../phy/lte-phy.h \
+  ../src/device/../core/eventScheduler/simulator.h \
+  ../src/device/../core/eventScheduler/event.h \
+  ../src/device/../core/eventScheduler/calendar.h \
+  ../src/device/../core/eventScheduler/make-event.h
 
 ../src/device/HeNodeB.h:
 
@@ -116,3 +120,11 @@ src/device/HeNodeB.d src/device/HeNodeB.o: ../src/device/HeNodeB.cpp \
 ../src/device/../phy/enb-lte-phy.h:
 
 ../src/device/../phy/lte-phy.h:
+
+../src/device/../core/eventScheduler/simulator.h:
+
+../src/device/../core/eventScheduler/event.h:
+
+../src/device/../core/eventScheduler/calendar.h:
+
+../src/device/../core/eventScheduler/make-event.h:

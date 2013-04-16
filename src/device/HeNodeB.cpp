@@ -21,6 +21,7 @@
 
 #include "HeNodeB.h"
 #include "../phy/henb-lte-phy.h"
+#include "../core/eventScheduler/simulator.h"
 
 
 HeNodeB::HeNodeB ( int idElement,
@@ -29,6 +30,7 @@ HeNodeB::HeNodeB ( int idElement,
   SetIDNetworkNode (idElement);
   SetNodeType(NetworkNode::TYPE_HOME_BASE_STATION);
   SetFemtoCell (cell);
+  SetActiveTime(Simulator::Init()->Now());
 
   double pos_X = cell->GetCellCenterPosition()->GetCoordinateX();
   double pos_Y = cell->GetCellCenterPosition()->GetCoordinateY();
@@ -70,4 +72,3 @@ HeNodeB::GetFemtoCell (void)
 {
   return m_femtocell;
 }
-

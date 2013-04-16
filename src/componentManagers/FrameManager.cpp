@@ -277,9 +277,9 @@ FrameManager::ResourceAllocation(void)
 		record_2 = *iter_2;
 		
 		//If the state is sleep, skip
-		if (record_2->GetNodeState() == NetworkNode::STATE_SLEEP) {
-			continue;
-		}
+//		if (record_2->GetNodeState() == NetworkNode::STATE_SLEEP) {
+//			continue;
+//		}
 #ifdef FRAME_MANAGER_DEBUG
 		std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
 		record_2->GetIDNetworkNode() << std::endl;

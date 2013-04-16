@@ -153,6 +153,18 @@ void
 NetworkNode::MakeActive (void)
 {
   SetNodeState (STATE_ACTIVE);
+  std::cout <<"Activate cell " << m_idNetworkNode << std::endl;
+
+}
+
+void
+NetworkNode::MakeSleep (void)
+{
+	SetNodeState(STATE_SLEEP);
+	std::cout << " --------- time =  "
+	<< Simulator::Init()->Now() << " --------- " << std::endl;
+	std::cout <<"Put cell " << m_idNetworkNode << " into sleep" << std::endl;
+
 }
 
 NetworkNode::NodeState
@@ -161,6 +173,16 @@ NetworkNode::GetNodeState (void) const
   return m_state;
 }
 
+void NetworkNode::SetActiveTime(double time)
+{
+	m_activeTime = time;
+}
+
+double
+NetworkNode::GetActiveTime()
+{
+	return m_activeTime;
+}
 
 void
 NetworkNode::SendPacketBurst (PacketBurst* p)
