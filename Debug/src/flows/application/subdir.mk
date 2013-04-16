@@ -19,7 +19,8 @@ OBJS += \
 ./src/flows/application/TraceBased.o \
 ./src/flows/application/VoIP.o \
 ./src/flows/application/WEB.o \
-./src/flows/application/application-sink.o 
+./src/flows/application/application-sink.o \
+./src/flows/application/MyTraffic.o 
 
 CPP_DEPS += \
 ./src/flows/application/Application.d \

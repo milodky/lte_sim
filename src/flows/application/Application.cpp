@@ -357,7 +357,8 @@ Application::Trace (Packet* p)
   *
   * TX   APPLICATION_TYPE   BEARER_ID  SIZE   SRC_ID   DST_ID   TIME
   */
-  std::cout << "TX";
+
+  std::cout << "my TX";
   switch (m_applicationType)
     {
       case Application::APPLICATION_TYPE_VOIP:
@@ -380,6 +381,11 @@ Application::Trace (Packet* p)
     	  std::cout << " INF_BUF";
     	  break;
         }
+      case Application::APPLICATION_TYPE_MYTRAFFIC:
+      {
+    	  std::cout << " My_Traffic";
+    	  break;
+      }
       default:
         {
     	  std::cout << " UNDEFINED";

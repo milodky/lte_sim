@@ -57,6 +57,9 @@
 #include <stdlib.h>
 #include <cstring>
 
+
+#include "scenarios/MyScenario.h"
+
 int
 main (int argc, char *argv[])
 {
@@ -85,6 +88,9 @@ main (int argc, char *argv[])
 		  Simple ();
 	    }
 
+	  if (strcmp(argv[1], "123") == 0) {
+		  my_scenario(atoi(argv[2]), atof(argv[3]), atof(argv[4]), atof(argv[5]));
+	  }
 
 
 
