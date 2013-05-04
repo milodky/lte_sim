@@ -89,7 +89,7 @@ main (int argc, char *argv[])
 	    }
 
 	  if (strcmp(argv[1], "123") == 0) {
-		  my_scenario(atoi(argv[2]), atof(argv[3]), atof(argv[4]), atof(argv[5]));
+		  my_scenario(atoi(argv[2]), atof(argv[3]), atof(argv[4]));
 	  }
 
 
@@ -176,9 +176,18 @@ main (int argc, char *argv[])
 		  double maxDelay = atof(argv[16]);
 		  int video_bit_rate = atoi(argv[17]);
 		  int seed;
-		  if (argc==19) seed = atoi(argv[18]);
-		  else seed = -1;
-		  SingleCellWithFemto ( nbBuilding, buildingType, activityRatio, radius, nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type, frame_struct, speed, accessPolicy, maxDelay, video_bit_rate, seed);
+		  //seed = atoi(argv[18]);
+		  int filesize = atoi(argv[18]);
+		  seed = -1;
+		  double stop_time = atof(argv[19]);
+		  double my_miu = atof(argv[20]);
+		  double idle_time = atof(argv[21]);
+		  double sleep_time = atof(argv[22]);
+		  SingleCellWithFemto ( nbBuilding, buildingType, activityRatio, radius,
+				  nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type,
+				  frame_struct, speed, accessPolicy, maxDelay, video_bit_rate,
+				  seed, filesize, stop_time, my_miu,
+				  idle_time, sleep_time);
 		}
 	  if (strcmp(argv[1], "SingleCellWithStreets")==0)
 		{

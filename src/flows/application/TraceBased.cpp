@@ -165,9 +165,7 @@ TraceBased::Send (void)
     	  packet->SetID(uid);
     	  packet->SetTimeStamp (Simulator::Init()->Now ());
     	  packet->SetSize (MAXMTUSIZE);
-
       	  Trace (packet);
-
 		  PacketTAGs *tags = new PacketTAGs ();
 		  tags->SetApplicationType(PacketTAGs::APPLICATION_TYPE_TRACE_BASED);
 		  tags->SetFrameNumber(GetFrameCounter());
@@ -176,19 +174,14 @@ TraceBased::Send (void)
 		  tags->SetApplicationSize (packet->GetSize ());
 		  dataOfFrameAlreadySent+=MAXMTUSIZE;
 		  packet->SetPacketTags(tags);
-
-
     	  UDPHeader *udp = new UDPHeader (GetClassifierParameters ()->GetSourcePort (),
     			                          GetClassifierParameters ()->GetDestinationPort ());
     	  packet->AddUDPHeader (udp);
-
     	  IPHeader *ip = new IPHeader (GetClassifierParameters ()->GetSourceID (),
     	                               GetClassifierParameters ()->GetDestinationID ());
     	  packet->AddIPHeader (ip);
-
     	  PDCPHeader *pdcp = new PDCPHeader ();
     	  packet->AddPDCPHeader (pdcp);
-
     	  GetRadioBearer()->Enqueue (packet);
 		}
 

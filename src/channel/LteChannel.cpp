@@ -56,6 +56,7 @@ LteChannel::StartTx (PacketBurst* p, TransmittedSignal* txSignal, NetworkNode* s
 	 						  p,
 	  						  txSignal,
 	  						  src);
+
 #ifdef TRANSMISSION_DEBUG
   std::cout << "   =======  channel  =======" << std::endl;
 #endif
@@ -68,6 +69,7 @@ LteChannel::StartRx (PacketBurst* p, TransmittedSignal* txSignal, NetworkNode* s
 #ifdef TEST_DEVICE_ON_CHANNEL
   std::cout << "LteChannel::StartRx ch " << GetChannelId () << std::endl;
 #endif
+
 
   for (std::vector<NetworkNode*>::iterator it = GetDevices ()->begin();
 		  it != GetDevices ()->end (); it++)

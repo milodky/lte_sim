@@ -21,7 +21,7 @@
 #include "../device/IPClassifier/ClassifierParameters.h"
 
 
-static void my_scenario(int file_size_miu, double time_miu, double bitrate, double simulation_end_time) {
+static void my_scenario(int file_size_miu, double time_miu, double simulation_end_time) {
 
 
 
@@ -74,7 +74,7 @@ static void my_scenario(int file_size_miu, double time_miu, double bitrate, doub
 	  int srcPort = 0;
 	  int dstPort = 100;
 	  double startTime = 0.1; //s
-	  double stopTime = 16.12;  //s
+	  double stopTime = simulation_end_time;  //s
 	  ClassifierParameters *cp = new ClassifierParameters (gw->GetIDNetworkNode(),
 			  	  	  	  	  ue->GetIDNetworkNode(),
 			   	  	  	  	  srcPort,
@@ -91,7 +91,7 @@ static void my_scenario(int file_size_miu, double time_miu, double bitrate, doub
 	  MyTrafficApplication->SetInterval (time_miu);
 	  MyTrafficApplication->SetSize (file_size_miu);
 
-	  MyTrafficApplication->SetSBitRate(bitrate);
+	//  MyTrafficApplication->SetSBitRate(bitrate);
 
 	  MyTrafficApplication->SetClassifierParameters (cp);
 	  MyTrafficApplication->SetQoSParameters (qos);
@@ -109,18 +109,15 @@ static void my_scenario(int file_size_miu, double time_miu, double bitrate, doub
 	  simulator->SetStop(simulation_end_time);
 	  simulator->Run ();
 	  double average_file_size = MyTrafficApplication->total_file_size / MyTrafficApplication->on_period_num;
-
+/*
 	  std::cout << "Total Packets sent is" << MyTrafficApplication->on_period_num
 	  	  	  << "\nAverage file size is "
 			  << average_file_size
-			  << "B;\nAvearge ON period is "
-			  << average_file_size / MyTrafficApplication->bit_rate
-			  << "ms;\nAverage transmission period is "
-			  << average_file_size / MyTrafficApplication->bit_rate +
-			  MyTrafficApplication->total_transmission_time / MyTrafficApplication->on_period_num
+			  << "B;\nAverage interval period is "
+			  << MyTrafficApplication->total_transmission_time / MyTrafficApplication->on_period_num
 			  << "ms\n";
 
-
+*/
 }
 
 

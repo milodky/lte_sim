@@ -19,9 +19,6 @@
  * Author: Giuseppe Piro <g.piro@poliba.it>
  */
 
-
-
-
 #ifndef SIMULATOR_H
 #define SIMULATOR_H
 
@@ -33,16 +30,14 @@
 #include <string>
 #include <iostream>
 
-
 /*
  * Simulator
  * Control the scheduling of simulation events.
  */
 
-class Simulator 
-{
+class Simulator {
 private:
-	Simulator ();
+	Simulator();
 	static Simulator *ptr;
 
 	Calendar *m_calendar;
@@ -53,117 +48,105 @@ private:
 
 	int m_uid;
 
-	void ProcessOneEvent (void);
+	void ProcessOneEvent(void);
 
 public:
-	virtual ~Simulator ();
+	virtual ~Simulator();
+	static int off_time;
+	static int in_time;
+
+	static double idle_time;
+	static double sleep_time;
 
 	static Simulator*
-	Init (void)
-	  {
-		if (ptr==NULL)
-	      {
-		    ptr = new Simulator;
-	   	  }
+	Init(void) {
+		if (ptr == NULL) {
+			ptr = new Simulator;
+		}
 		return ptr;
-	  }
+	}
 
-	double Now (void);
+	double Now(void);
 
-	void Run (void);
-	void RunAndStop (int time);
-	void Stop (void);
-	void SetStop (double time);
+	void Run(void);
+	void RunAndStop(int time);
+	void Stop(void);
+	void SetStop(double time);
 
-	int GetUID (void);
+	int GetUID(void);
 
 	void
-	DoSchedule (double time, Event *event);
-
+	DoSchedule(double time, Event *event);
 
 	/*
 	 * Schedule methods are called to insert a new method
 	 * into the calendar scheduler
 	 */
-	template <typename MEM, typename OBJ>
+	template<typename MEM, typename OBJ>
 	void
-	Schedule (double time, MEM mem_ptr, OBJ obj);
+	Schedule(double time, MEM mem_ptr, OBJ obj);
 
-	template <typename MEM, typename OBJ, typename T1>
+	template<typename MEM, typename OBJ, typename T1>
 	void
-	Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1);
+	Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1);
 
-	template <typename MEM, typename OBJ, typename T1, typename T2>
+	template<typename MEM, typename OBJ, typename T1, typename T2>
 	void
-	Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2);
+	Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2);
 
-	template <typename MEM, typename OBJ, typename T1, typename T2, typename T3>
+	template<typename MEM, typename OBJ, typename T1, typename T2, typename T3>
 	void
-	Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2, T3 a3);
-
-	void
-	Schedule (double time, void (*f) (void));
-
-	template <typename U1>
-	void
-	Schedule (double time, void (*f) (U1));
-
-	template <typename U1, typename T1>
-	void
-	Schedule (double time, void (*f) (U1), T1 a1);
+	Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2, T3 a3);
 
 	void
-	PrintMemoryUsage (void);
+	Schedule(double time, void (*f)(void));
+
+	template<typename U1>
+	void
+	Schedule(double time, void (*f)(U1));
+
+	template<typename U1, typename T1>
+	void
+	Schedule(double time, void (*f)(U1), T1 a1);
+
+	void
+	PrintMemoryUsage(void);
 };
 
-
-template <typename MEM, typename OBJ>
-void
-Simulator::Schedule (double time, MEM mem_ptr, OBJ obj)
-{
-  DoSchedule (time, MakeEvent (mem_ptr, obj));
+template<typename MEM, typename OBJ>
+void Simulator::Schedule(double time, MEM mem_ptr, OBJ obj) {
+	DoSchedule(time, MakeEvent(mem_ptr, obj));
 }
 
-template <typename MEM, typename OBJ, typename T1>
-void
-Simulator::Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1)
-{
-  DoSchedule (time, MakeEvent(mem_ptr, obj, a1));
+template<typename MEM, typename OBJ, typename T1>
+void Simulator::Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1) {
+	DoSchedule(time, MakeEvent(mem_ptr, obj, a1));
 }
 
-template <typename MEM, typename OBJ, typename T1, typename T2>
-void
-Simulator::Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2)
-{
-  DoSchedule (time, MakeEvent(mem_ptr, obj, a1, a2));
+template<typename MEM, typename OBJ, typename T1, typename T2>
+void Simulator::Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2) {
+	DoSchedule(time, MakeEvent(mem_ptr, obj, a1, a2));
 }
 
-template <typename MEM, typename OBJ, typename T1, typename T2, typename T3>
-void
-Simulator::Schedule (double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2, T3 a3)
-{
-  DoSchedule (time, MakeEvent(mem_ptr, obj, a1, a2, a3));
+template<typename MEM, typename OBJ, typename T1, typename T2, typename T3>
+void Simulator::Schedule(double time, MEM mem_ptr, OBJ obj, T1 a1, T2 a2,
+		T3 a3) {
+	DoSchedule(time, MakeEvent(mem_ptr, obj, a1, a2, a3));
 }
 
 /*
-void
-Simulator::Schedule (double time, void (*f) (void))
-{
-	//NON FUNZIONA ANCORA !?!?!?!
-  //DoSchedule (time, MakeEvent (f));
+ void
+ Simulator::Schedule (double time, void (*f) (void))
+ {
+ //NON FUNZIONA ANCORA !?!?!?!
+ //DoSchedule (time, MakeEvent (f));
+ }
+ */
+
+template<typename U1, typename T1>
+void Simulator::Schedule(double time, void (*f)(U1), T1 a1) {
+	DoSchedule(time, MakeEvent(f, a1));
 }
-*/
-
-template <typename U1, typename T1>
-void
-Simulator::Schedule (double time, void (*f) (U1), T1 a1)
-{
-  DoSchedule (time, MakeEvent(f, a1));
-}
-
-
-
 
 #endif /* SIMULATOR_H */
-
 

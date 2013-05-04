@@ -34,6 +34,10 @@
 #include <stdlib.h>
 
 Simulator* Simulator::ptr=NULL;
+int  Simulator::off_time;
+int  Simulator::in_time;
+double  Simulator::idle_time;
+double  Simulator::sleep_time;
 
 Simulator::Simulator ()
 {

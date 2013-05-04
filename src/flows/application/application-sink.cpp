@@ -81,6 +81,7 @@ ApplicationSink::GetSourceApplication (void)
 void
 ApplicationSink::Receive (Packet* p)
 {
+	return;
   /*
    * Trace format:
    *

@@ -221,13 +221,16 @@ FrameManager::UpdateUserPosition(void)
 void
 FrameManager::ResourceAllocation(void)
 {
-	std::cout << "ResourceAllocation" << std::endl;
+//	std::cout << "ResourceAllocation" << std::endl;
 	std::vector<ENodeB*> *records = GetNetworkManager ()->GetENodeBContainer ();
 	std::vector<ENodeB*>::iterator iter;
 	ENodeB *record;
 	for (iter = records->begin (); iter != records->end (); iter++)
 	{
 		record = *iter;
+		int current_time = (int) (Simulator::Init()->Now() * 1000);
+					if (record->GetNodeType() == 3)
+						std::cout << "@" << Simulator::Init()->Now() << "s, type is " << record->GetNodeType() << ", number is " << record->GetNbOfUserEquipmentRecords () << std::endl;
 		
 #ifdef FRAME_MANAGER_DEBUG
 		std::cout << " FRAME_MANAGER_DEBUG: RBs allocation for eNB " <<
@@ -237,6 +240,7 @@ FrameManager::ResourceAllocation(void)
 		
 		if (GetFrameStructure () == FrameManager::FRAME_STRUCTURE_FDD)
 		{
+
 			record->ResourceBlocksAllocation ();
 		}
 		else

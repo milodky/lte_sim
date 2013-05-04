@@ -41,7 +41,7 @@ public:
 
     unsigned int total_file_size;
     double total_transmission_time;
-	double bit_rate; //in KBps
+    double off_transmission_time;
 
 private:
 

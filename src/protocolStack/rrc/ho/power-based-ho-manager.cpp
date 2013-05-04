@@ -59,7 +59,7 @@ PowerBasedHoManager::CheckHandoverNeed (UserEquipment* ue)
 	
 	if (targetNode->GetNodeState() == NetworkNode::STATE_SLEEP) {
 		targetRXpower = -1 * std::numeric_limits<double>::max();
-		std::cout << "targetRXpower(" << ue->GetIDNetworkNode()<< ")"<< targetRXpower << std::endl;
+//		std::cout << "targetRXpower(" << ue->GetIDNetworkNode()<< ")"<< targetRXpower << std::endl;
 	}
 
   double RXpower;

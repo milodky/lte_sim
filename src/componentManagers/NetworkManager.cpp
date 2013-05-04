@@ -798,9 +798,9 @@ NetworkManager::HandoverProcedure(double time, UserEquipment* ue, NetworkNode* o
 //	TransferBearerInfo(ue, newTarget);
 
   ue->GetMobilityModel ()->SetLastHandoverTime(time);
-	std::cout << "user " <<  ue->GetIDNetworkNode () << " starts HO "
-	"\n\t old eNB = " << ue->GetTargetNode ()->GetIDNetworkNode () <<
-	"\n\t target eNB = " <<  newTarget->GetIDNetworkNode () << std::endl;
+//	std::cout << "user " <<  ue->GetIDNetworkNode () << " starts HO "
+//	"\n\t old eNB = " << ue->GetTargetNode ()->GetIDNetworkNode () <<
+//	"\n\t target eNB = " <<  newTarget->GetIDNetworkNode () << std::endl;
 }
 
 
@@ -817,8 +817,8 @@ NetworkManager::TransferBearerInfo (UserEquipment* ue, NetworkNode* target)
 		 (target->GetNodeType() == NetworkNode::TYPE_ENODEB && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION) ||
       		 (target->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION && ue->GetTargetNode ()->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION))
     {
-	    std::cout << "** HO ** \t TransferBearerInfo for user "
-	    <<  ue->GetIDNetworkNode () << " to " << target->GetIDNetworkNode() << std::endl;
+//	    std::cout << "** HO ** \t TransferBearerInfo for user "
+//	    <<  ue->GetIDNetworkNode () << " to " << target->GetIDNetworkNode() << std::endl;
 	   ENodeB *oldTargetNode = (ENodeB*) ue->GetTargetNode ();
 	   ENodeB *newTargetNode = (ENodeB*) target;
 
@@ -876,9 +876,9 @@ NetworkManager::TransferBearerInfo (UserEquipment* ue, NetworkNode* target)
        oldTargetNode->DeleteUserEquipment (ue);
 
 	   // 4 - update cell and new target enb for the ue
-//#ifdef HANDOVER_DEBUG
+#ifdef HANDOVER_DEBUG
        std::cout << "update cell and new target enb for the ue"<< std::endl;
-//#endif
+#endif
 	   ue->SetTargetNode (newTargetNode);
 
 	   // MOVE RRC CONTEXT FOR THE OLD TARGET NODE TO THE NEWER ONE

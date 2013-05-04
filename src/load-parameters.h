@@ -28,7 +28,7 @@
 
 
 /* path */
-static std::string path ("/Users/macbook/lte-sim-read-only/");
+static std::string path ("/Users/Tim/Documents/study/projects/lte-sim-read-only/");
 
 
 /* tracing */
