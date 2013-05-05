@@ -6,7 +6,7 @@
 #var = [100 200 300 400 500]
 clear;
 S_Time=1000
-echo "Total simulation time is ${S_Time}s and the sleep time is {$1}s"
+echo "Total simulation time is ${S_Time}s and the sleep time is ${1}s"
 
 for ((i = 1; i < 10; i+=2));
 do

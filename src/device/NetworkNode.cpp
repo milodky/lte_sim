@@ -117,16 +117,10 @@ void NetworkNode::SetNodeState(NodeState state) {
 void NetworkNode::MakeActive(void) {
 	SetNodeState(STATE_ACTIVE);
 	SetActiveTime(Simulator::Init()->Now());
-//	std::cout << "@ " << Simulator::Init()->Now() << "s Activate cell "
-	//		<< m_idNetworkNode << std::endl;
-
 }
 
 void NetworkNode::MakeSleep(void) {
 	SetNodeState(STATE_SLEEP);
-//	std::cout << "@" << Simulator::Init()->Now() << "s: Put cell "
-//			<< m_idNetworkNode << " into sleep." << std::endl;
-
 }
 
 NetworkNode::NodeState NetworkNode::GetNodeState(void) const {

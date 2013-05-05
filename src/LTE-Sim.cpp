@@ -183,7 +183,7 @@ main (int argc, char *argv[])
 		  double my_miu = atof(argv[20]);
 		  double idle_time = atof(argv[21]);
 		  double sleep_time = atof(argv[22]);
-		  SingleCellWithFemto ( nbBuilding, buildingType, activityRatio, radius,
+		  SingleCellWithFemto (radius, nbBuilding, buildingType, activityRatio,
 				  nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type,
 				  frame_struct, speed, accessPolicy, maxDelay, video_bit_rate,
 				  seed, filesize, stop_time, my_miu,

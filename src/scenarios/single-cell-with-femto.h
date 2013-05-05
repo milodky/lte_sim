@@ -54,7 +54,8 @@
 #include "../flows/application/MyTraffic.h"
 
 static void SingleCellWithFemto(double radius, int nbBuildings,
-		int buildingType, double activityRatio, int nbUE, int nbFemtoUE,
+		int buildingType, double activityRatio,
+		 int nbUE, int nbFemtoUE,
 		int nbVoIP, int nbVideo, int nbBE, int nbMy, int sched_type,
 		int frame_struct, int speed, int accessPolicy, double maxDelay,
 		int videoBitRate, int seed, int filesize, double stop_time,

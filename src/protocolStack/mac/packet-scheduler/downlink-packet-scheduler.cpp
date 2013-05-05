@@ -99,12 +99,9 @@ void DownlinkPacketScheduler::DoSchedule(void) {
 	UpdateAverageTransmissionRate();
 	SelectFlowsToSchedule();
 	ENodeB *enb = (ENodeB*) GetMacEntity()->GetDevice();
-	int current_time = (int) (Simulator::Init()->Now() * 1000);
-//  if (enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION && (current_time % 1000 == 0))
-	//  std::cout << "current time " << Simulator::Init()->Now() << std::endl;
+
 	if (GetFlowsToSchedule()->size() == 0) {
 
-		//std::cout << "@ time " << Simulator::Init()->Now() << "s, node type "<<enb->GetNodeType() << " status " << enb->GetNodeState() << std::endl;
 		if (enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION) {
 			Simulator::in_time++;
 		}
@@ -113,14 +110,11 @@ void DownlinkPacketScheduler::DoSchedule(void) {
 				&& enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION
 				&& enb->GetNodeState() == NetworkNode::STATE_ACTIVE) {
 			enb->MakeSleep();
-			//std::cout << "idle time " << Simulator::Init()->Now() - enb->GetActiveTime() << std::endl;
 			Simulator::Init()->Schedule(Simulator::sleep_time, &NetworkNode::MakeActive, enb);
 			Simulator::off_time++;
 			enb->SetActiveTime(Simulator::Init()->Now());
 		}
 	} else {
-		//std::cout << "@ time " << Simulator::Init()->Now() << "s, node type "<<enb->GetNodeType() << " status " << enb->GetNodeState() << std::endl;
-
 		enb->SetActiveTime(Simulator::Init()->Now());
 		RBsAllocation();
 	}
