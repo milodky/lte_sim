@@ -100,11 +100,13 @@ void DownlinkPacketScheduler::DoSchedule(void) {
 	SelectFlowsToSchedule();
 	ENodeB *enb = (ENodeB*) GetMacEntity()->GetDevice();
 
+	if (enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION) {
+		Simulator::in_time++;
+	}
+
 	if (GetFlowsToSchedule()->size() == 0) {
 
-		if (enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION) {
-			Simulator::in_time++;
-		}
+
 
 		if (Simulator::Init()->Now() - enb->GetActiveTime() >= Simulator::idle_time
 				&& enb->GetNodeType() == NetworkNode::TYPE_HOME_BASE_STATION
