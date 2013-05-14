@@ -58,7 +58,7 @@
 #include <cstring>
 
 
-#include "scenarios/MyScenario.h"
+#include "scenarios/Random-Burst.h"
 
 int
 main (int argc, char *argv[])
@@ -88,9 +88,41 @@ main (int argc, char *argv[])
 		  Simple ();
 	    }
 
-	  if (strcmp(argv[1], "123") == 0) {
-		  my_scenario(atoi(argv[2]), atof(argv[3]), atof(argv[4]));
-	  }
+	  if (strcmp(argv[1], "Randomburst")==0)
+		{
+		  int nbBuilding = atoi(argv[2]);
+		  int buildingType = atoi(argv[3]);
+		  double activityRatio = atof(argv[4]);
+		  double radius = atof(argv[5]);
+		  int nbUE = atoi(argv[6]);
+		  int nbFemtoUE = atoi(argv[7]);
+		  int nbVoIP = atoi(argv[8]);
+		  int nbVideo = atoi(argv[9]);
+		  int nbBE = atoi(argv[10]);
+		  int nbCBR = atoi(argv[11]);
+
+
+		  int nbRB = atoi(argv[12]);
+		  int sched_type = atoi(argv[13]);
+		  int frame_struct = atoi(argv[14]);
+		  int speed = atoi(argv[15]);
+		  int accessPolicy = atoi(argv[16]);
+		  double maxDelay = atof(argv[17]);
+		  int video_bit_rate = atoi(argv[18]);
+		  //seed = atoi(argv[18]);
+		  int filesize = atoi(argv[19]);
+		  int seed = -1;
+		  int nbTrans = atof(argv[20]);
+		  double my_miu = atof(argv[21]);
+		  double idle_time = atof(argv[22]);
+		  double sleep_time = atof(argv[23]);
+		 	 RandomBurstTest (radius, nbBuilding, buildingType, activityRatio,
+				  nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, nbRB, sched_type,
+				  frame_struct, speed, accessPolicy, maxDelay, video_bit_rate,
+				  seed, filesize, nbTrans, my_miu,
+				  idle_time, sleep_time);
+			
+		}
 
 
 
@@ -159,36 +191,27 @@ main (int argc, char *argv[])
 
 	  if (strcmp(argv[1], "SingleCellWithFemto")==0)
 		{
-		  int nbBuilding = atoi(argv[2]);
-		  int buildingType = atoi(argv[3]);
-		  double activityRatio = atof(argv[4]);
-		  double radius = atof(argv[5]);
-		  int nbUE = atoi(argv[6]);
-		  int nbFemtoUE = atoi(argv[7]);
-		  int nbVoIP = atoi(argv[8]);
-		  int nbVideo = atoi(argv[9]);
-		  int nbBE = atoi(argv[10]);
-		  int nbCBR = atoi(argv[11]);
-		  int sched_type = atoi(argv[12]);
-		  int frame_struct = atoi(argv[13]);
-		  int speed = atoi(argv[14]);
-		  int accessPolicy = atoi(argv[15]);
-		  double maxDelay = atof(argv[16]);
-		  int video_bit_rate = atoi(argv[17]);
-		  int seed;
-		  //seed = atoi(argv[18]);
-		  int filesize = atoi(argv[18]);
-		  seed = -1;
-		  double stop_time = atof(argv[19]);
-		  double my_miu = atof(argv[20]);
-		  double idle_time = atof(argv[21]);
-		  double sleep_time = atof(argv[22]);
-		  SingleCellWithFemto (radius, nbBuilding, buildingType, activityRatio,
-				  nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type,
-				  frame_struct, speed, accessPolicy, maxDelay, video_bit_rate,
-				  seed, filesize, stop_time, my_miu,
-				  idle_time, sleep_time);
-		}
+		  double radius = atof(argv[2]);
+		  	          int nbBuilding = atoi(argv[3]);
+		  		  int buildingType = atoi(argv[4]);
+		  		  double activityRatio = atof(argv[5]);
+		  		  int nbUE = atoi(argv[6]);
+		  		  int nbFemtoUE = atoi(argv[7]);
+		  		  int nbVoIP = atoi(argv[8]);
+		  		  int nbVideo = atoi(argv[9]);
+		  		  int nbBE = atoi(argv[10]);
+		  		  int nbCBR = atoi(argv[11]);
+		  		  int sched_type = atoi(argv[12]);
+		  		  int frame_struct = atoi(argv[13]);
+		  		  int speed = atoi(argv[14]);
+		  		  int accessPolicy = atoi(argv[15]);
+		  		  double maxDelay = atof(argv[16]);
+		  		  int video_bit_rate = atoi(argv[17]);
+		  		  int seed;
+		  		  if (argc==19) seed = atoi(argv[18]);
+		  		  else seed = -1;
+		  SingleCellWithFemto(radius, nbBuilding, buildingType, activityRatio, nbUE, nbFemtoUE, nbVoIP, nbVideo, nbBE, nbCBR, sched_type, frame_struct, speed, accessPolicy, maxDelay, video_bit_rate, seed);
+                }
 	  if (strcmp(argv[1], "SingleCellWithStreets")==0)
 		{
 		  int nbStreets = atoi(argv[2]);
