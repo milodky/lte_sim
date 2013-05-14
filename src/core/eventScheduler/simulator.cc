@@ -38,7 +38,6 @@ int  Simulator::off_time;
 int  Simulator::in_time;
 double  Simulator::idle_time;
 double  Simulator::sleep_time;
-int  Simulator::k_time;
 
 Simulator::Simulator ()
 {
@@ -124,6 +123,8 @@ Simulator::GetUID (void)
 void 
 Simulator::Stop (void)
 {
+  std::cout << " SIMULATOR_DEBUG: Stop ()"
+      << std::endl;
   m_stop = true;
 }
 

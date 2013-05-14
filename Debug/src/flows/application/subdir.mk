@@ -10,7 +10,6 @@ CPP_SRCS += \
 ../src/flows/application/TraceBased.cpp \
 ../src/flows/application/VoIP.cpp \
 ../src/flows/application/WEB.cpp \
-../src/flows/application/RandomBurst.cpp \
 ../src/flows/application/application-sink.cpp 
 
 OBJS += \
@@ -21,7 +20,7 @@ OBJS += \
 ./src/flows/application/VoIP.o \
 ./src/flows/application/WEB.o \
 ./src/flows/application/application-sink.o \
-./src/flows/application/RandomBurst.o 
+./src/flows/application/MyTraffic.o 
 
 CPP_DEPS += \
 ./src/flows/application/Application.d \

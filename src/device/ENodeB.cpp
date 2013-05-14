@@ -393,7 +393,8 @@ ENodeB::UplinkResourceBlockAllocation (void)
 void
 ENodeB::DownlinkResourceBlokAllocation (void)
 {
-  if (GetDLScheduler () != NULL)
+	//std::cout << "type is " << GetNodeType() << ", number is " << GetNbOfUserEquipmentRecords () << std::endl;
+  if (GetDLScheduler () != NULL && GetNbOfUserEquipmentRecords () > 0)
    {
 	  GetDLScheduler ()->Schedule();
    }

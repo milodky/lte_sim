@@ -54,7 +54,6 @@ public:
 	virtual ~Simulator();
 	static int off_time;
 	static int in_time;
-	static int k_time;
 
 	static double idle_time;
 	static double sleep_time;

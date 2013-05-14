@@ -28,7 +28,7 @@
 
 
 /* path */
-static std::string path ("/Users/Tim/Documents/c_eclipse/lte/lte_sim/");
+static std::string path ("/Users/Tim/Documents/study/projects/lte-sim-read-only/");
 
 
 /* tracing */

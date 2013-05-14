@@ -381,7 +381,7 @@ Application::Trace (Packet* p)
     	  std::cout << " INF_BUF";
     	  break;
         }
-      case Application::APPLICATION_TYPE_RANDOMBURST:
+      case Application::APPLICATION_TYPE_MYTRAFFIC:
       {
     	  std::cout << " My_Traffic";
     	  break;
