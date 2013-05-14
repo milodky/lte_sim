@@ -19,7 +19,7 @@
  * Author: Francesco Capozzi <f.capozzi@poliba.it>
  */
 
-
+#include <limits>
 #include "power-based-ho-manager.h"
 #include "../../../device/NetworkNode.h"
 #include "../../../device/UserEquipment.h"

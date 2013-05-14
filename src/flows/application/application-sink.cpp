@@ -81,12 +81,12 @@ ApplicationSink::GetSourceApplication (void)
 void
 ApplicationSink::Receive (Packet* p)
 {
-	return;
   /*
    * Trace format:
    *
    * TX   APPLICATION_TYPE   BEARER_ID  SIZE   SRC_ID   DST_ID   TIME
    */
+#ifdef __DISPLAY__
 
   if (!_APP_TRACING_) return;
 
@@ -134,6 +134,6 @@ ApplicationSink::Receive (Packet* p)
                         << " D " << delay
                         << " " << ue->IsIndoor () << std::endl;
 
-
+#endif
   delete p;
 }
